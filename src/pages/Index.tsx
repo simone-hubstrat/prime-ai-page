@@ -1,16 +1,13 @@
 import React, { useEffect } from 'react';
-import HeroSection from '@/components/sections/HeroSection';
-import BenefitsSection from '@/components/sections/BenefitsSection';
-import LearningSection from '@/components/sections/LearningSection';
-import TargetSection from '@/components/sections/TargetSection';
-import PricingSection from '@/components/sections/PricingSection';
-import FinalCTASection from '@/components/sections/FinalCTASection';
-import Footer from '@/components/sections/Footer';
+import HeroKiller from '@/components/sections/HeroKiller';
+import SocialProof from '@/components/sections/SocialProof';
+import StrategicPricing from '@/components/sections/StrategicPricing';
+import FinalKiller from '@/components/sections/FinalKiller';
+import SimpleFooter from '@/components/sections/SimpleFooter';
 
 const Index: React.FC = () => {
-  // Scroll reveal animation setup
+  // Smooth scrolling for anchor links
   useEffect(() => {
-    // Smooth scrolling for anchor links
     const handleClick = (e: Event) => {
       const target = e.target as HTMLAnchorElement;
       if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
@@ -27,7 +24,7 @@ const Index: React.FC = () => {
     return () => document.removeEventListener('click', handleClick);
   }, []);
 
-  // Performance optimization: preload critical images
+  // Preload critical images
   useEffect(() => {
     const preloadImages = [
       '/src/assets/hero-ai-course.jpg',
@@ -45,26 +42,20 @@ const Index: React.FC = () => {
 
   return (
     <main className="min-h-screen bg-background">
-      {/* Hero Section - Above the fold */}
-      <HeroSection />
+      {/* 1. Hero Killer - Immediate Conversion */}
+      <HeroKiller />
       
-      {/* Benefits Section */}
-      <BenefitsSection />
+      {/* 2. Social Proof + Tangible Benefits - Trust Building */}
+      <SocialProof />
       
-      {/* Learning Outcomes */}
-      <LearningSection />
+      {/* 3. Strategic Pricing + Urgency - Decision Making */}
+      <StrategicPricing />
       
-      {/* Target Audience */}
-      <TargetSection />
+      {/* 4. Final CTA + Guarantees - Closing Sale */}
+      <FinalKiller />
       
-      {/* Pricing Highlight */}
-      <PricingSection />
-      
-      {/* Final CTA */}
-      <FinalCTASection />
-      
-      {/* Footer */}
-      <Footer />
+      {/* Simple Footer */}
+      <SimpleFooter />
     </main>
   );
 };
