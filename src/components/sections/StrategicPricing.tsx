@@ -31,7 +31,7 @@ const StrategicPricing: React.FC = () => {
         </div>
         
         {/* Main Pricing Card */}
-        <div className="conversion-card max-w-md mx-auto bg-card/90 backdrop-blur-sm border-2 border-secondary/30 glow-green">
+        <div className="conversion-card max-w-md mx-auto bg-gradient-to-br from-background to-muted/30 border-2 border-secondary/20">
           <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-3 mb-2">
               <span className="price-crossed">€49,99</span>
@@ -54,7 +54,7 @@ const StrategicPricing: React.FC = () => {
           </div>
           
           {/* Main CTA */}
-          <Button variant="secondary" size="lg" className="w-full mb-4 cta-killer">
+          <Button variant="secondary" size="lg" className="w-full mb-4">
             Sì, voglio imparare - Acquista il corso
           </Button>
           

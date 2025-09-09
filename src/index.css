@@ -6,38 +6,36 @@
 
 @layer base {
   :root {
-    /* Cyberpunk Dark Theme - Navy Profondo */
-    --background: 210 80% 3%; /* Navy profondissimo quasi nero */
-    --foreground: 0 0% 100%; /* Pure White */
+    /* Ultra-Minimal Design System for Conversion */
+    --background: 0 0% 100%;
+    --foreground: 215 16% 47%;
     
-    /* Core Brand Colors - Elettrici */
-    --primary: 195 100% 50%; /* Ciano elettrico intenso */
-    --primary-foreground: 210 80% 3%;
-    --secondary: 155 100% 50%; /* Verde-teal neon */
+    /* Only 2 Core Colors */
+    --primary: 217 91% 60%; /* Trust Blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 158 64% 52%; /* Action Green */
     --secondary-foreground: 0 0% 100%;
     
-    /* Dark Theme System Colors */
-    --card: 255 255 255 / 0.08; /* Semi-transparent più visibile */
-    --card-foreground: 0 0% 100%;
-    --border: 255 255 255 / 0.15; /* Border più visibile */
-    --input: 210 50% 8%; /* Input background scuro */
-    --ring: 195 100% 50%; /* Cyan elettrico focus */
-    --muted: 210 50% 8%; /* Muted più scuro */
-    --muted-foreground: 210 30% 70%; /* Light Gray Text */
-    --accent: 255 255 255 / 0.12; /* Accent più pronunciato */
-    --accent-foreground: 0 0% 100%;
+    /* Minimal System Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 215 16% 47%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 215 16% 47%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --popover: 210 50% 8%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 16% 47%;
     
-    /* Cyberpunk Glow Effects - Ultra Intensi */
-    --shadow-cta: 0 0 40px hsl(155 100% 50% / 0.8), 0 0 80px hsl(155 100% 50% / 0.4), 0 4px 30px hsl(155 100% 50% / 0.6);
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(255 255 255 / 0.08);
-    --shadow-glow-cyan: 0 0 60px hsl(195 100% 50% / 0.6), 0 0 120px hsl(195 100% 50% / 0.3);
-    --shadow-glow-green: 0 0 60px hsl(155 100% 50% / 0.6), 0 0 120px hsl(155 100% 50% / 0.3);
+    /* Conversion-Optimized Shadows */
+    --shadow-cta: 0 4px 14px 0 hsl(158 64% 52% / 0.39);
+    --shadow-card: 0 2px 10px 0 hsl(215 16% 47% / 0.08);
     
-    --radius: 0.75rem;
+    --radius: 0.5rem;
     
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -53,77 +51,25 @@
 @layer base {
   * { @apply border-border; }
   body { 
-    @apply text-foreground;
+    @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, sans-serif;
-    background: 
-      /* Ciano elettrico glow top-right - Ultra intenso */
-      radial-gradient(ellipse 1500px 1200px at top right, hsl(195 100% 50% / 0.4), hsl(195 100% 50% / 0.2) 40%, transparent 70%),
-      /* Verde-teal neon glow bottom-left - Molto vivido */
-      radial-gradient(ellipse 1000px 800px at bottom left, hsl(155 100% 50% / 0.35), hsl(155 100% 50% / 0.15) 50%, transparent 70%),
-      /* Glow sottile centrale per profondità */
-      radial-gradient(ellipse 800px 400px at center, hsl(180 100% 30% / 0.1), transparent 60%),
-      /* Linear gradient verticale - Navy profondissimo */
-      linear-gradient(135deg, 
-        hsl(210 80% 3%) 0%, 
-        hsl(210 60% 5%) 15%, 
-        hsl(220 50% 4%) 35%, 
-        hsl(210 70% 6%) 50%, 
-        hsl(220 50% 4%) 65%, 
-        hsl(210 60% 5%) 85%, 
-        hsl(210 80% 3%) 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
   }
 }
 
 @layer components {
-  /* Dark Theme Typography */
-  .hero-title { @apply text-4xl md:text-6xl font-extrabold text-foreground leading-tight drop-shadow-sm; }
+  /* Ultra-Conversion Typography */
+  .hero-title { @apply text-4xl md:text-6xl font-extrabold text-foreground leading-tight; }
   .hero-subtitle { @apply text-lg md:text-xl text-muted-foreground leading-relaxed; }
-  .price-display { @apply text-5xl md:text-7xl font-black text-secondary drop-shadow-[0_0_30px_hsl(155_100%_50%/0.6)]; }
+  .price-display { @apply text-5xl md:text-7xl font-black text-secondary; }
   .price-crossed { @apply text-lg text-muted-foreground line-through; }
   
-  /* Enhanced CTA System with Glow */
+  /* CTA System */
   .cta-killer { 
-    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-[var(--shadow-cta)] hover:shadow-[var(--shadow-cta)] hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden;
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 shadow-[var(--shadow-cta)] hover:shadow-[var(--shadow-cta)] hover:scale-[1.02] active:scale-[0.98];
   }
   
-  .cta-killer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
-  }
-  
-  .cta-killer:hover::before {
-    left: 100%;
-  }
-  
-  /* Enhanced Card System */
+  /* Card System */
   .conversion-card { 
-    @apply bg-card p-6 rounded-lg shadow-[var(--shadow-card)] border border-border backdrop-blur-sm transition-all duration-300 hover:shadow-[var(--shadow-glow-cyan)] hover:border-primary/30;
-  }
-  
-  /* Glow Effect Utilities */
-  .glow-cyan {
-    @apply shadow-[var(--shadow-glow-cyan)];
-  }
-  
-  .glow-green {
-    @apply shadow-[var(--shadow-glow-green)];
-  }
-  
-  /* Badge Enhancement */
-  .badge-limited {
-    @apply bg-secondary text-secondary-foreground px-4 py-2 rounded-full font-bold text-sm animate-pulse shadow-[var(--shadow-glow-green)];
-  }
-  
-  /* Testimonial Card */
-  .testimonial-card {
-    @apply bg-card/80 backdrop-blur-sm p-6 rounded-lg border border-border/50 hover:border-primary/30 transition-all duration-300;
+    @apply bg-card p-6 rounded-lg shadow-[var(--shadow-card)] border border-border;
   }
 }

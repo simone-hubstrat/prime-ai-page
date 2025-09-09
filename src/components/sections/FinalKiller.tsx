@@ -5,13 +5,8 @@ import { ArrowRight, Shield, Infinity, Users, Sparkles } from 'lucide-react';
 
 const FinalKiller: React.FC = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Enhanced background with multiple layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-transparent to-primary/10"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl opacity-30"></div>
-      
-      <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
+    <section className="py-20 bg-gradient-to-br from-secondary/5 to-primary/5">
+      <div className="container mx-auto px-4 max-w-4xl text-center">
         <Badge variant="limited" className="mb-6">
           🔥 ULTIMA POSSIBILITÀ
         </Badge>
@@ -44,11 +39,11 @@ const FinalKiller: React.FC = () => {
         </div>
         
         {/* Final CTA */}
-        <div className="conversion-card bg-card/90 backdrop-blur-sm border-2 border-secondary/40 max-w-lg mx-auto glow-green">
+        <div className="conversion-card bg-gradient-to-r from-secondary/10 to-primary/10 border-2 border-secondary/30 max-w-lg mx-auto">
           <div className="space-y-4">
             <div className="text-3xl font-bold text-foreground">Inizia subito per €27,97</div>
             
-            <Button variant="secondary" size="lg" className="w-full text-xl py-6 cta-killer">
+            <Button variant="secondary" size="lg" className="w-full text-xl py-6">
               Sì, voglio il corso Prime AI
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
@@ -77,7 +72,7 @@ const FinalKiller: React.FC = () => {
         </div>
         
         {/* Final Urgency */}
-        <div className="mt-8 p-4 bg-secondary/20 rounded-lg border border-secondary/30 backdrop-blur-sm">
+        <div className="mt-8 p-4 bg-secondary/10 rounded-lg border border-secondary/20">
           <p className="text-secondary font-semibold">
             ⏰ Questa offerta scade tra 47 ore e 23 minuti
           </p>
