@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle, Star, Users, Clock } from 'lucide-react';
-import benefitsImage from '@/assets/course-benefits.jpg';
+import benefitsImage from '@/assets/social-proof-new.png';
 
 const SocialProof: React.FC = () => {
   const benefits = [
