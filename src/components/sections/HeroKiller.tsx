@@ -40,7 +40,7 @@ const HeroKiller: React.FC = () => {
             </div>
             
             {/* Price + CTA */}
-            <div className="conversion-card bg-muted/50">
+            <div className="conversion-card bg-card/80 backdrop-blur-sm border-primary/20">
               <div className="flex items-baseline gap-4 mb-4">
                 <span className="price-crossed">€49,99</span>
                 <div className="price-display">
@@ -48,7 +48,7 @@ const HeroKiller: React.FC = () => {
                 </div>
               </div>
               
-              <Button variant="secondary" size="lg" className="w-full">
+              <Button variant="secondary" size="lg" className="w-full cta-killer">
                 Inizia ora - Accedi al corso
               </Button>
               

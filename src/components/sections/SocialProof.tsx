@@ -26,8 +26,11 @@ const SocialProof: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section className="py-20 relative">
+      {/* Subtle background enhancement */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-card/30 to-transparent"></div>
+      
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         {/* Social Proof Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -64,7 +67,7 @@ const SocialProof: React.FC = () => {
             </div>
             
             {/* Urgency Element */}
-            <div className="conversion-card bg-secondary/10 border-secondary/20">
+            <div className="conversion-card bg-secondary/20 border-secondary/40 backdrop-blur-sm glow-green">
               <div className="flex items-center gap-2 mb-2">
                 <Clock className="w-5 h-5 text-secondary" />
                 <span className="font-bold text-foreground">Offerta scade tra:</span>
@@ -85,10 +88,10 @@ const SocialProof: React.FC = () => {
             {/* Testimonials */}
             <div className="space-y-4">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="conversion-card">
+                <div key={index} className="testimonial-card">
                   <div className="flex items-center gap-1 mb-2">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
                   <p className="text-foreground mb-3">"{testimonial.text}"</p>
