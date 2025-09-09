@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
-import heroImage from '@/assets/hero-ai-course.jpg';
+import heroImage from '@/assets/hero-new.png';
 
 const HeroKiller: React.FC = () => {
   return (
