@@ -6,36 +6,36 @@
 
 @layer base {
   :root {
-    /* Professional Dark Theme Design System */
-    --background: 15 23% 6%; /* Navy Dark Base */
+    /* Cyberpunk Dark Theme - Navy Profondo */
+    --background: 210 80% 3%; /* Navy profondissimo quasi nero */
     --foreground: 0 0% 100%; /* Pure White */
     
-    /* Core Brand Colors */
-    --primary: 186 85% 44%; /* Cyan Accent */
-    --primary-foreground: 15 23% 6%;
-    --secondary: 158 64% 52%; /* Emerald Green CTA */
+    /* Core Brand Colors - Elettrici */
+    --primary: 195 100% 50%; /* Ciano elettrico intenso */
+    --primary-foreground: 210 80% 3%;
+    --secondary: 155 100% 50%; /* Verde-teal neon */
     --secondary-foreground: 0 0% 100%;
     
     /* Dark Theme System Colors */
-    --card: 255 255 255 / 0.05; /* Semi-transparent White */
+    --card: 255 255 255 / 0.08; /* Semi-transparent più visibile */
     --card-foreground: 0 0% 100%;
-    --border: 255 255 255 / 0.1; /* Subtle Light Border */
-    --input: 15 23% 12%; /* Dark Input Background */
-    --ring: 186 85% 44%; /* Cyan Focus Ring */
-    --muted: 15 23% 12%; /* Dark Muted Background */
-    --muted-foreground: 210 40% 64%; /* Light Gray Text */
-    --accent: 255 255 255 / 0.08; /* Subtle Accent Background */
+    --border: 255 255 255 / 0.15; /* Border più visibile */
+    --input: 210 50% 8%; /* Input background scuro */
+    --ring: 195 100% 50%; /* Cyan elettrico focus */
+    --muted: 210 50% 8%; /* Muted più scuro */
+    --muted-foreground: 210 30% 70%; /* Light Gray Text */
+    --accent: 255 255 255 / 0.12; /* Accent più pronunciato */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --popover: 15 23% 12%;
+    --popover: 210 50% 8%;
     --popover-foreground: 0 0% 100%;
     
-    /* Dark Theme Glow Effects */
-    --shadow-cta: 0 0 30px hsl(158 64% 52% / 0.5), 0 4px 20px hsl(158 64% 52% / 0.3);
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3), 0 0 0 1px hsl(255 255 255 / 0.05);
-    --shadow-glow-cyan: 0 0 40px hsl(186 85% 44% / 0.3);
-    --shadow-glow-green: 0 0 40px hsl(158 64% 52% / 0.3);
+    /* Cyberpunk Glow Effects - Ultra Intensi */
+    --shadow-cta: 0 0 40px hsl(155 100% 50% / 0.8), 0 0 80px hsl(155 100% 50% / 0.4), 0 4px 30px hsl(155 100% 50% / 0.6);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(255 255 255 / 0.08);
+    --shadow-glow-cyan: 0 0 60px hsl(195 100% 50% / 0.6), 0 0 120px hsl(195 100% 50% / 0.3);
+    --shadow-glow-green: 0 0 60px hsl(155 100% 50% / 0.6), 0 0 120px hsl(155 100% 50% / 0.3);
     
     --radius: 0.75rem;
     
@@ -56,12 +56,21 @@
     @apply text-foreground;
     font-family: 'Inter', system-ui, sans-serif;
     background: 
-      /* Cyan glow top-right */
-      radial-gradient(ellipse 800px 600px at top right, hsl(186 85% 44% / 0.15), transparent),
-      /* Green glow bottom-left */ 
-      radial-gradient(ellipse 800px 600px at bottom left, hsl(158 64% 52% / 0.15), transparent),
-      /* Main gradient */
-      linear-gradient(135deg, hsl(15 23% 6%) 0%, hsl(30 41% 12%) 25%, hsl(15 23% 8%) 50%, hsl(30 41% 12%) 75%, hsl(15 23% 6%) 100%);
+      /* Ciano elettrico glow top-right - Ultra intenso */
+      radial-gradient(ellipse 1500px 1200px at top right, hsl(195 100% 50% / 0.4), hsl(195 100% 50% / 0.2) 40%, transparent 70%),
+      /* Verde-teal neon glow bottom-left - Molto vivido */
+      radial-gradient(ellipse 1000px 800px at bottom left, hsl(155 100% 50% / 0.35), hsl(155 100% 50% / 0.15) 50%, transparent 70%),
+      /* Glow sottile centrale per profondità */
+      radial-gradient(ellipse 800px 400px at center, hsl(180 100% 30% / 0.1), transparent 60%),
+      /* Linear gradient verticale - Navy profondissimo */
+      linear-gradient(135deg, 
+        hsl(210 80% 3%) 0%, 
+        hsl(210 60% 5%) 15%, 
+        hsl(220 50% 4%) 35%, 
+        hsl(210 70% 6%) 50%, 
+        hsl(220 50% 4%) 65%, 
+        hsl(210 60% 5%) 85%, 
+        hsl(210 80% 3%) 100%);
     background-attachment: fixed;
     min-height: 100vh;
   }
@@ -71,7 +80,7 @@
   /* Dark Theme Typography */
   .hero-title { @apply text-4xl md:text-6xl font-extrabold text-foreground leading-tight drop-shadow-sm; }
   .hero-subtitle { @apply text-lg md:text-xl text-muted-foreground leading-relaxed; }
-  .price-display { @apply text-5xl md:text-7xl font-black text-secondary drop-shadow-[0_0_20px_hsl(158_64%_52%/0.4)]; }
+  .price-display { @apply text-5xl md:text-7xl font-black text-secondary drop-shadow-[0_0_30px_hsl(155_100%_50%/0.6)]; }
   .price-crossed { @apply text-lg text-muted-foreground line-through; }
   
   /* Enhanced CTA System with Glow */
