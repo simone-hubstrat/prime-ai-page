@@ -5,20 +5,22 @@
 
 @layer base {
   :root {
-    /* GRADIENTE SCURO CHE SI ARMONIZZA CON L'IMMAGINE BLU */
-    --background: 220 50% 8%;           /* #0a1019 - Blu navy scuro */
-    --background-mid: 215 45% 12%;      /* #0f1824 - Blu navy medio */
-    --background-end: 210 40% 16%;      /* #162030 - Blu navy più chiaro */
-    --foreground: 0 0% 100%;            /* Bianco per testo */
+    /* GRADIENTE ULTRA-SFUMATO - DAL BASSO SCURO ALL'ALTO CHIARO */
+    --background-dark: 220 45% 6%;        /* #0a0f1a - Quasi nero-blu (bottom) */
+    --background-mid-low: 218 45% 12%;    /* #151f2e - Blu scuro */
+    --background-mid: 215 60% 25%;        /* #2a3f5f - Blu medio */
+    --background-mid-high: 210 85% 45%;   /* #4a8fe6 - Blu chiaro */
+    --background-light: 208 100% 85%;     /* #bae6ff - Azzurro chiaro (top) */
+    --foreground: 0 0% 100%;              /* Bianco */
     
     /* Brand Colors */
-    --primary: 225 100% 67%;            /* #436BFF */
+    --primary: 225 100% 67%;              /* #436BFF */
     --primary-foreground: 0 0% 100%;
-    --secondary: 163 89% 58%;           /* #2FE6B8 */
+    --secondary: 163 89% 58%;             /* #2FE6B8 */
     --secondary-foreground: 0 0% 100%;
     
     /* System Colors */
-    --card: 215 45% 12%;
+    --card: 218 45% 12%;                  /* Cards blu scuro */
     --card-foreground: 0 0% 100%;
     --border: 215 30% 25%;
     --input: 215 30% 25%;
@@ -29,21 +31,21 @@
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --popover: 215 45% 12%;
+    --popover: 218 45% 12%;
     --popover-foreground: 0 0% 100%;
     
     /* Shadows */
     --shadow-cta: 0 8px 32px 0 hsl(163 89% 58% / 0.4), 0 0 0 1px hsl(163 89% 58% / 0.1);
-    --shadow-card: 0 4px 20px 0 hsl(220 50% 8% / 0.6), 0 0 0 1px hsl(215 30% 25% / 0.3);
-    --shadow-glow-cyan: 0 0 80px hsl(195 100% 75% / 0.15);
-    --shadow-glow-green: 0 0 60px hsl(163 89% 58% / 0.1);
+    --shadow-card: 0 4px 20px 0 hsl(220 45% 6% / 0.6), 0 0 0 1px hsl(215 30% 25% / 0.3);
+    --shadow-glow-cyan: 0 0 80px hsl(208 100% 85% / 0.2);
+    --shadow-glow-green: 0 0 60px hsl(163 89% 58% / 0.15);
     
     --radius: 0.75rem;
     
     /* Sidebar */
-    --sidebar-background: 215 45% 12%;
+    --sidebar-background: 218 45% 12%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 220 50% 8%;
+    --sidebar-primary: 220 45% 6%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 215 25% 30%;
     --sidebar-accent-foreground: 0 0% 100%;
@@ -61,18 +63,21 @@
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
     
-    /* GRADIENTE SCURO CHE SI ARMONIZZA CON IMMAGINE BLU */
-    background: linear-gradient(to bottom, 
-      hsl(var(--background)) 0%,        /* Blu navy scuro */
-      hsl(var(--background-mid)) 60%,   /* Blu navy medio */
-      hsl(var(--background-end)) 100%   /* Blu navy più chiaro */
+    /* GRADIENTE ULTRA-SFUMATO CON 5 STOP POINTS */
+    background: linear-gradient(to top, 
+      hsl(var(--background-dark)) 0%,        /* Quasi nero-blu bottom */
+      hsl(var(--background-mid-low)) 25%,    /* Blu scuro */
+      hsl(var(--background-mid)) 50%,        /* Blu medio */
+      hsl(var(--background-mid-high)) 75%,   /* Blu chiaro */
+      hsl(var(--background-light)) 100%      /* Azzurro chiaro top */
     );
     
-    background-color: hsl(var(--background));
+    /* Fallback */
+    background-color: hsl(var(--background-dark));
     min-height: 100vh;
   }
 
-  /* IMMAGINE HERO - FUSIONE SOTTILE */
+  /* HERO IMAGE - FUSIONE PERFETTA */
   .hero-image-natural {
     object-fit: cover;
     object-position: center right;
@@ -80,29 +85,31 @@
     height: auto;
     border-radius: 0.5rem;
     
-    /* Leggera sfumatura solo sui bordi estremi */
-    mask: radial-gradient(ellipse 110% 110% at center, 
-      black 80%, 
-      rgba(0,0,0,0.95) 90%,
-      rgba(0,0,0,0.7) 95%,
+    /* Mask ultra-sottile solo sui bordi estremi */
+    mask: radial-gradient(ellipse 105% 105% at center, 
+      black 85%, 
+      rgba(0,0,0,0.98) 92%,
+      rgba(0,0,0,0.8) 96%,
       transparent 100%);
-    -webkit-mask: radial-gradient(ellipse 110% 110% at center, 
-      black 80%, 
-      rgba(0,0,0,0.95) 90%,
-      rgba(0,0,0,0.7) 95%,
+    -webkit-mask: radial-gradient(ellipse 105% 105% at center, 
+      black 85%, 
+      rgba(0,0,0,0.98) 92%,
+      rgba(0,0,0,0.8) 96%,
       transparent 100%);
   }
 }
 
 @layer components {
-  /* Typography - Testo bianco su sfondo scuro */
+  /* Typography - Contrasto adattivo */
   .hero-title { 
-    @apply text-4xl md:text-6xl font-extrabold text-foreground leading-tight;
-    text-shadow: 0 0 40px hsl(var(--foreground) / 0.1);
+    @apply text-4xl md:text-6xl font-extrabold leading-tight;
+    color: hsl(var(--background-dark)); /* Blu scuro per contrasto su sfondo chiaro */
+    text-shadow: 0 2px 4px hsl(var(--background-light) / 0.3);
   }
   
   .hero-subtitle { 
-    @apply text-lg md:text-xl text-muted-foreground leading-relaxed; 
+    @apply text-lg md:text-xl leading-relaxed;
+    color: hsl(var(--background-mid-low)); /* Blu scuro per leggibilità */
   }
   
   .price-display { 
@@ -111,7 +118,8 @@
   }
   
   .price-crossed { 
-    @apply text-lg text-muted-foreground line-through; 
+    @apply text-lg line-through;
+    color: hsl(var(--muted-foreground));
   }
 
   /* CTA */
@@ -133,30 +141,36 @@
     @apply scale-[0.98];
   }
 
-  /* Cards */
+  /* Cards - Semi-trasparenti per gradiente */
   .conversion-card { 
-    @apply bg-card/80 backdrop-blur-sm p-6 rounded-lg border border-border/50;
+    @apply backdrop-blur-sm p-6 rounded-lg border;
+    background: hsl(var(--card) / 0.85);
+    border-color: hsl(var(--border) / 0.5);
     box-shadow: var(--shadow-card);
     transition: all 0.3s ease;
   }
   
   .conversion-card:hover {
-    @apply border-border;
+    background: hsl(var(--card) / 0.95);
+    border-color: hsl(var(--border));
     box-shadow: 
-      0 8px 32px 0 hsl(220 50% 8% / 0.8),
+      0 8px 32px 0 hsl(220 45% 6% / 0.8),
       0 0 0 1px hsl(215 30% 25% / 0.5);
   }
 
-  /* Section */
+  /* Section glow */
   .section-gradient {
     background: 
-      radial-gradient(ellipse 600px 300px at 50% 0%, hsl(215 45% 12% / 0.1) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 300px at 50% 0%, hsl(208 100% 85% / 0.1) 0%, transparent 70%),
       transparent;
   }
 
   /* Badge */
   .badge-glow {
-    @apply bg-primary/20 text-primary border border-primary/30;
+    @apply border;
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--primary));
+    border-color: hsl(var(--primary) / 0.3);
     box-shadow: 
       0 0 20px hsl(var(--primary) / 0.2),
       inset 0 1px 0 hsl(var(--primary) / 0.1);
