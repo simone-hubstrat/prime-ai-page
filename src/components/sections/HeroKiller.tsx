@@ -59,11 +59,11 @@ const HeroKiller: React.FC = () => {
           </div>
           
           {/* Right - Hero Image */}
-          <div className="relative hero-image-container">
+          <div className="relative">
             <img 
               src={heroImage} 
               alt="Persona che lavora al computer con AI"
-              className="hero-image-blend w-full h-auto rounded-lg shadow-[var(--shadow-card)]"
+              className="w-full h-auto rounded-lg shadow-[var(--shadow-card)]"
               loading="eager"
             />
           </div>
