@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 @layer base {
   :root {
     /* GRADIENTE SCURO CHE SI ARMONIZZA CON L'IMMAGINE BLU */
@@ -51,27 +50,28 @@
     --sidebar-ring: 163 89% 58%;
   }
 }
-
 @layer base {
   * { 
     @apply border-border; 
   }
-  
   body { 
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
     
     /* GRADIENTE SCURO CHE SI ARMONIZZA CON IMMAGINE BLU */
-    background: linear-gradient(to bottom, 
-      hsl(var(--background)) 0%,        /* Blu navy scuro */
-      hsl(var(--background-mid)) 60%,   /* Blu navy medio */
-      hsl(var(--background-end)) 100%   /* Blu navy più chiaro */
+    background: linear-gradient(to top, 
+      #19223A 0%,        /* Blu scuro in basso */
+      #1D273E 20%,       /* Transizione 1 */
+      #202A40 40%,       /* Transizione 2 */
+      #2C354B 60%,       /* Transizione 3 */
+      #414A5D 80%,       /* Transizione 4 */
+      #495164 90%,       /* Transizione 5 */
+      #7B8492 100%       /* Schiarito in alto */
     );
     
-    background-color: hsl(var(--background));
+    background-color: #19223A;
     min-height: 100vh;
   }
-
   /* IMMAGINE HERO - FUSIONE SOTTILE */
   .hero-image-natural {
     object-fit: cover;
@@ -93,34 +93,28 @@
       transparent 100%);
   }
 }
-
 @layer components {
   /* Typography - Testo bianco su sfondo scuro */
   .hero-title { 
     @apply text-4xl md:text-6xl font-extrabold text-foreground leading-tight;
     text-shadow: 0 0 40px hsl(var(--foreground) / 0.1);
   }
-  
   .hero-subtitle { 
     @apply text-lg md:text-xl text-muted-foreground leading-relaxed; 
   }
-  
   .price-display { 
     @apply text-5xl md:text-7xl font-black text-secondary;
     filter: drop-shadow(var(--shadow-glow-green));
   }
-  
   .price-crossed { 
     @apply text-lg text-muted-foreground line-through; 
   }
-
   /* CTA */
   .cta-killer { 
     @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300;
     box-shadow: var(--shadow-cta);
     transform-origin: center;
   }
-  
   .cta-killer:hover {
     @apply scale-[1.02];
     box-shadow: 
@@ -128,32 +122,27 @@
       0 0 0 1px hsl(163 89% 58% / 0.2),
       var(--shadow-glow-green);
   }
-  
   .cta-killer:active {
     @apply scale-[0.98];
   }
-
   /* Cards */
   .conversion-card { 
     @apply bg-card/80 backdrop-blur-sm p-6 rounded-lg border border-border/50;
     box-shadow: var(--shadow-card);
     transition: all 0.3s ease;
   }
-  
   .conversion-card:hover {
     @apply border-border;
     box-shadow: 
       0 8px 32px 0 hsl(220 50% 8% / 0.8),
       0 0 0 1px hsl(215 30% 25% / 0.5);
   }
-
   /* Section */
   .section-gradient {
     background: 
       radial-gradient(ellipse 600px 300px at 50% 0%, hsl(215 45% 12% / 0.1) 0%, transparent 70%),
       transparent;
   }
-
   /* Badge */
   .badge-glow {
     @apply bg-primary/20 text-primary border border-primary/30;
