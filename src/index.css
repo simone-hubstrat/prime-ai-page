@@ -58,15 +58,15 @@
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
     
-    /* GRADIENTE SCURO CHE SI ARMONIZZA CON IMMAGINE BLU */
+    /* GRADIENTE BLU SCURO CHE PARTE DAL BASSO E SI SCHIARISCE VERSO L'ALTO */
     background: linear-gradient(to top, 
-      #19223A 0%,        /* Blu scuro in basso */
-      #1D273E 20%,       /* Transizione 1 */
-      #202A40 40%,       /* Transizione 2 */
-      #2C354B 60%,       /* Transizione 3 */
-      #414A5D 80%,       /* Transizione 4 */
-      #495164 90%,       /* Transizione 5 */
-      #7B8492 100%       /* Schiarito in alto */
+      #19223A 0%,        /* Base scura in basso */
+      #1D273E 15%,       /* Primo schiarimento */
+      #202A40 30%,       /* Secondo schiarimento */
+      #2C354B 50%,       /* Medio */
+      #414A5D 70%,       /* Più chiaro */
+      #495164 85%,       /* Ancora più chiaro */
+      #7B8492 100%       /* Più chiaro in alto */
     );
     
     background-color: #19223A;
