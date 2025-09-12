@@ -7,10 +7,10 @@
 @layer base {
   :root {
     /* Simple Clean Gradient Design System */
-    /* Simple gradient: #0a0e1a → #1a1f35 → #2d1b3d */
+    /* Gradient matching hero image: dark blue → darker blue → black */
     --background: 230 46% 8%;           /* #0a0e1a - Dark blue-black start */
-    --background-mid: 230 35% 17%;      /* #1a1f35 - Mid blue-gray */
-    --background-end: 254 27% 18%;      /* #2d1b3d - Purple-blue end */
+    --background-mid: 230 20% 5%;       /* Very dark blue, less saturated */
+    --background-end: 0 0% 0%;          /* Pure black to match image bottom */
     --foreground: 0 0% 100%;            /* #FFFFFF - Pure white text */
     
     /* Brand Colors */
@@ -61,8 +61,8 @@
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
     
-    /* Simple Clean Gradient Background */
-    background: linear-gradient(135deg, 
+    /* Vertical gradient matching hero image */
+    background: linear-gradient(to bottom, 
       hsl(var(--background)) 0%, 
       hsl(var(--background-mid)) 50%,
       hsl(var(--background-end)) 100%
