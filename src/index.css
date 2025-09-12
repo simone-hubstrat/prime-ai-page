@@ -5,12 +5,11 @@
 
 @layer base {
   :root {
-    /* Simple Clean Gradient Design System */
-    /* Gradient matching hero image: dark blue → darker blue → black */
-    --background: 230 46% 8%;           /* #0a0e1a - Dark blue-black start */
-    --background-mid: 230 20% 5%;       /* Very dark blue, less saturated */
-    --background-end: 0 0% 0%;          /* Pure black to match image bottom */
-    --foreground: 0 0% 100%;            /* #FFFFFF - Pure white text */
+    /* GRADIENTE PERFETTO MATCHING IMMAGINE HERO */
+    --background: 207 100% 91%;         /* #d5ecff - Azzurro chiaro top */
+    --background-mid: 212 100% 71%;     /* #6eb1ff - Blu medio */
+    --background-end: 221 70% 17%;      /* #0d204b - Blu navy scuro bottom */
+    --foreground: 0 0% 100%;            /* Bianco puro */
     
     /* Brand Colors */
     --primary: 225 100% 67%;            /* #436BFF - Badge blue */
@@ -18,37 +17,37 @@
     --secondary: 163 89% 58%;           /* #2FE6B8 - CTA green */
     --secondary-foreground: 0 0% 100%;
     
-    /* System Colors - Dark Theme Optimized */
-    --card: 225 52% 13%;                /* Mid-tone for cards */
+    /* System Colors - Adapted for new gradient */
+    --card: 221 70% 17%;                /* Navy scuro per cards */
     --card-foreground: 0 0% 100%;
-    --border: 225 27% 25%;              /* Subtle borders */
-    --input: 225 27% 25%;
-    --ring: 163 89% 58%;                /* Focus ring matches CTA */
-    --muted: 225 35% 20%;               /* Slightly lighter than card */
-    --muted-foreground: 220 11% 76%;    /* #BFC7D1 - Muted text */
-    --accent: 225 35% 20%;
+    --border: 221 50% 25%;              /* Bordi navy */
+    --input: 221 50% 25%;
+    --ring: 163 89% 58%;                /* Focus ring verde */
+    --muted: 221 40% 30%;               /* Navy medio */
+    --muted-foreground: 210 15% 75%;    /* Testo muted chiaro */
+    --accent: 221 40% 30%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --popover: 225 52% 13%;
+    --popover: 221 70% 17%;
     --popover-foreground: 0 0% 100%;
     
-    /* Enhanced Shadows with Glow Effects */
+    /* Enhanced Shadows con nuovi colori */
     --shadow-cta: 0 8px 32px 0 hsl(163 89% 58% / 0.4), 0 0 0 1px hsl(163 89% 58% / 0.1);
-    --shadow-card: 0 4px 20px 0 hsl(225 62% 7% / 0.6), 0 0 0 1px hsl(225 27% 25% / 0.3);
-    --shadow-glow-cyan: 0 0 80px hsl(195 100% 75% / 0.15);
-    --shadow-glow-green: 0 0 60px hsl(163 89% 58% / 0.1);
+    --shadow-card: 0 4px 20px 0 hsl(221 70% 17% / 0.6), 0 0 0 1px hsl(221 50% 25% / 0.3);
+    --shadow-glow-cyan: 0 0 80px hsl(207 100% 85% / 0.2);
+    --shadow-glow-green: 0 0 60px hsl(163 89% 58% / 0.15);
     
     --radius: 0.75rem;
     
-    /* Sidebar (keeping for consistency) */
-    --sidebar-background: 225 52% 13%;
+    /* Sidebar */
+    --sidebar-background: 221 70% 17%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 225 62% 7%;
+    --sidebar-primary: 221 80% 12%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 225 35% 20%;
+    --sidebar-accent: 221 40% 30%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 225 27% 25%;
+    --sidebar-border: 221 50% 25%;
     --sidebar-ring: 163 89% 58%;
   }
 }
@@ -62,92 +61,40 @@
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
     
-    /* Vertical gradient matching hero image */
+    /* GRADIENTE IDENTICO ALL'IMMAGINE HERO */
     background: linear-gradient(to bottom, 
-      hsl(var(--background)) 0%, 
-      hsl(var(--background-mid)) 50%,
-      hsl(var(--background-end)) 100%
+      hsl(var(--background)) 0%,        /* Azzurro chiaro */
+      hsl(var(--background-mid)) 50%,   /* Blu medio */
+      hsl(var(--background-end)) 100%   /* Navy scuro */
     );
     
-    /* Fallback for older browsers */
-    background-color: hsl(var(--background));
-    
-    /* Ensure full height coverage */
+    /* Fallback */
+    background-color: hsl(var(--background-end));
     min-height: 100vh;
   }
 
-  /* SOLUZIONE HERO IMAGE BLENDING AGGRESSIVA */
-  .hero-image-extreme-blend {
+  /* HERO IMAGE - FUSIONE PERFETTA */
+  .hero-image-perfect-blend {
     object-fit: cover;
     object-position: center right;
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
     
-    /* Mix blend mode aggressivo */
-    mix-blend-mode: multiply;
-    opacity: 0.9;
-    
-    /* Mask radiale molto graduale */
-    mask: radial-gradient(ellipse 150% 120% at center right, 
-      black 40%, 
-      rgba(0,0,0,0.8) 60%,
-      rgba(0,0,0,0.4) 80%,
-      transparent 95%);
-    -webkit-mask: radial-gradient(ellipse 150% 120% at center right, 
-      black 40%, 
-      rgba(0,0,0,0.8) 60%,
-      rgba(0,0,0,0.4) 80%,
-      transparent 95%);
+    /* Rimozione bordi con mask ultra-sottile */
+    mask: radial-gradient(ellipse 95% 95% at center, 
+      black 85%, 
+      rgba(0,0,0,0.9) 92%,
+      rgba(0,0,0,0.5) 96%,
+      transparent 100%);
+    -webkit-mask: radial-gradient(ellipse 95% 95% at center, 
+      black 85%, 
+      rgba(0,0,0,0.9) 92%,
+      rgba(0,0,0,0.5) 96%,
+      transparent 100%);
   }
 
-  /* ALTERNATIVA: Container con overlay gradiente */
-  .hero-image-container {
-    position: relative;
-    border-radius: 0.5rem;
-    overflow: hidden;
-  }
-
-  .hero-image-container img {
-    object-fit: cover;
-    object-position: center right;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .hero-image-container::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: 
-      radial-gradient(ellipse 120% 100% at center right,
-        transparent 35%,
-        hsl(var(--background) / 0.3) 60%,
-        hsl(var(--background) / 0.7) 80%,
-        hsl(var(--background)) 95%);
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .hero-image-container::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: 
-      linear-gradient(to left,
-        hsl(var(--background-end) / 0.8) 0%,
-        hsl(var(--background-mid) / 0.4) 40%,
-        transparent 70%),
-      linear-gradient(to bottom,
-        transparent 70%,
-        hsl(var(--background-end) / 0.6) 90%,
-        hsl(var(--background-end)) 100%);
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  /* FALLBACK: Immagine naturale semplice */
+  /* ALTERNATIVA: Natural senza effetti */
   .hero-image-natural {
     object-fit: cover;
     object-position: center right;
@@ -158,14 +105,16 @@
 }
 
 @layer components {
-  /* Dark Theme Typography - High Contrast */
+  /* Typography aggiornata per contrasto */
   .hero-title { 
-    @apply text-4xl md:text-6xl font-extrabold text-foreground leading-tight;
-    text-shadow: 0 0 40px hsl(var(--foreground) / 0.1);
+    @apply text-4xl md:text-6xl font-extrabold leading-tight;
+    color: hsl(var(--background-end)); /* Navy scuro per contrasto */
+    text-shadow: 0 2px 4px hsl(var(--background) / 0.3);
   }
   
   .hero-subtitle { 
-    @apply text-lg md:text-xl text-muted-foreground leading-relaxed; 
+    @apply text-lg md:text-xl leading-relaxed;
+    color: hsl(var(--background-end)); /* Navy per leggibilità */
   }
   
   .price-display { 
@@ -174,10 +123,11 @@
   }
   
   .price-crossed { 
-    @apply text-lg text-muted-foreground line-through; 
+    @apply text-lg line-through;
+    color: hsl(var(--muted-foreground));
   }
 
-  /* Enhanced CTA System with Glow */
+  /* CTA System */
   .cta-killer { 
     @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300;
     box-shadow: var(--shadow-cta);
@@ -196,30 +146,35 @@
     @apply scale-[0.98];
   }
 
-  /* Enhanced Card System */
+  /* Card System per sfondo gradiente */
   .conversion-card { 
-    @apply bg-card/80 backdrop-blur-sm p-6 rounded-lg border border-border/50;
+    @apply backdrop-blur-sm p-6 rounded-lg border;
+    background: hsl(var(--card) / 0.9);
+    border-color: hsl(var(--border) / 0.5);
     box-shadow: var(--shadow-card);
     transition: all 0.3s ease;
   }
   
   .conversion-card:hover {
-    @apply border-border;
+    border-color: hsl(var(--border));
     box-shadow: 
-      0 8px 32px 0 hsl(225 62% 7% / 0.8),
-      0 0 0 1px hsl(225 27% 25% / 0.5);
+      0 8px 32px 0 hsl(221 70% 17% / 0.8),
+      0 0 0 1px hsl(221 50% 25% / 0.5);
   }
 
-  /* Section Backgrounds */
+  /* Section con glow adattato */
   .section-gradient {
     background: 
-      radial-gradient(ellipse 600px 300px at 50% 0%, hsl(225 35% 20% / 0.1) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 300px at 50% 0%, hsl(207 100% 85% / 0.1) 0%, transparent 70%),
       transparent;
   }
 
-  /* Badge Glow */
+  /* Badge con contrasto */
   .badge-glow {
-    @apply bg-primary/20 text-primary border border-primary/30;
+    @apply border;
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--primary));
+    border-color: hsl(var(--primary) / 0.3);
     box-shadow: 
       0 0 20px hsl(var(--primary) / 0.2),
       inset 0 1px 0 hsl(var(--primary) / 0.1);
