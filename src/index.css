@@ -1,116 +1,159 @@
+/* ---------- TAILWIND BASE ---------- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+/* ---------- BASE LAYER ---------- */
 @layer base {
   :root {
-    /* Simple Clean Gradient Design System */
-    /* Gradient matching hero image: dark blue → darker blue → black */
-    --background: 230 46% 8%;           /* #0a0e1a - Dark blue-black start */
-    --background-mid: 230 20% 5%;       /* Very dark blue, less saturated */
-    --background-end: 0 0% 0%;          /* Pure black to match image bottom */
-    --foreground: 0 0% 100%;            /* #FFFFFF - Pure white text */
-    
-    /* Brand Colors */
-    --primary: 225 100% 67%;            /* #436BFF - Badge blue */
+    /* Gradient che replica l’immagine hero */
+    --background: 230 46% 8%;   /* #0a0e1a */
+    --background-mid: 230 20% 5%;
+    --background-end: 0 0% 0%;  /* #000000 */
+    --foreground: 0 0% 100%;
+
+    /* Brand */
+    --primary: 225 100% 67%;          /* #436BFF */
     --primary-foreground: 0 0% 100%;
-    --secondary: 163 89% 58%;           /* #2FE6B8 - CTA green */
+    --secondary: 163 89% 58%;         /* #2FE6B8 */
     --secondary-foreground: 0 0% 100%;
-    
-    /* System Colors - Dark Theme Optimized */
-    --card: 225 52% 13%;                /* Mid-tone for cards */
+
+    /* UI dark */
+    --card: 225 52% 13%;
     --card-foreground: 0 0% 100%;
-    --border: 225 27% 25%;              /* Subtle borders */
+    --border: 225 27% 25%;
     --input: 225 27% 25%;
-    --ring: 163 89% 58%;                /* Focus ring matches CTA */
-    --muted: 225 35% 20%;               /* Slightly lighter than card */
-    --muted-foreground: 220 11% 76%;    /* #BFC7D1 - Muted text */
+    --ring: 163 89% 58%;
+    --muted: 225 35% 20%;
+    --muted-foreground: 220 11% 76%;
     --accent: 225 35% 20%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --popover: 225 52% 13%;
     --popover-foreground: 0 0% 100%;
-    
-    /* Enhanced Shadows with Glow Effects */
+
+    /* Ombre */
     --shadow-cta: 0 8px 32px 0 hsl(163 89% 58% / 0.4), 0 0 0 1px hsl(163 89% 58% / 0.1);
     --shadow-card: 0 4px 20px 0 hsl(225 62% 7% / 0.6), 0 0 0 1px hsl(225 27% 25% / 0.3);
     --shadow-glow-cyan: 0 0 80px hsl(195 100% 75% / 0.15);
     --shadow-glow-green: 0 0 60px hsl(163 89% 58% / 0.1);
-    
-    --radius: 0.75rem;
-    
-    /* Sidebar (keeping for consistency) */
-    --sidebar-background: 225 52% 13%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 225 62% 7%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 225 35% 20%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 225 27% 25%;
-    --sidebar-ring: 163 89% 58%;
-  }
-}
 
-@layer base {
-  * { @apply border-border; }
-  
-  body { 
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
-    
-    /* Vertical gradient matching hero image */
-    background: linear-gradient(to bottom, 
-      hsl(var(--background)) 0%, 
+
+    /* Gradiente verticale */
+    background: linear-gradient(
+      to bottom,
+      hsl(var(--background)) 0%,
       hsl(var(--background-mid)) 50%,
       hsl(var(--background-end)) 100%
     );
-    
-    /* Fallback for older browsers */
-    background-color: hsl(var(--background));
-    
-    /* Ensure full height coverage */
+    background-color: hsl(var(--background)); /* fallback */
     min-height: 100vh;
   }
-  
-  /* Hero Image Integration */
-  .hero-image-natural {
+
+  /* ---------- HERO IMAGE BLENDING ---------- */
+  /* Opzione A: mask CSS (browser moderni) */
+  .hero-image-blended {
     object-fit: cover;
     object-position: center right;
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
+
+    /* Fade laterale + inferiore */
+    mask:
+      linear-gradient(to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%),
+      linear-gradient(to bottom,
+        black 90%,
+        transparent 100%);
+    mask-composite: intersect;
+
+    -webkit-mask:
+      linear-gradient(to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%),
+      linear-gradient(to bottom,
+        black 90%,
+        transparent 100%);
+    -webkit-mask-composite: source-in;
+  }
+
+  /* Opzione B: pseudo-element fallback */
+  .hero-image-container {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  .hero-image-container img {
+    object-fit: cover;
+    object-position: center right;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .hero-image-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right,
+        hsl(var(--background)) 0%,
+        transparent 20%,
+        transparent 80%,
+        hsl(var(--background-end)) 100%),
+      linear-gradient(to bottom,
+        transparent 85%,
+        hsl(var(--background-end)) 100%);
+    pointer-events: none;
   }
 }
 
+/* ---------- COMPONENTS LAYER ---------- */
 @layer components {
-  /* Dark Theme Typography - High Contrast */
-  .hero-title { 
+  /* Typography */
+  .hero-title {
     @apply text-4xl md:text-6xl font-extrabold text-foreground leading-tight;
     text-shadow: 0 0 40px hsl(var(--foreground) / 0.1);
   }
-  .hero-subtitle { 
-    @apply text-lg md:text-xl text-muted-foreground leading-relaxed; 
+  .hero-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
   }
-  .price-display { 
+  .price-display {
     @apply text-5xl md:text-7xl font-black text-secondary;
     filter: drop-shadow(var(--shadow-glow-green));
   }
-  .price-crossed { 
-    @apply text-lg text-muted-foreground line-through; 
+  .price-crossed {
+    @apply text-lg text-muted-foreground line-through;
   }
-  
-  /* Enhanced CTA System with Glow */
-  .cta-killer { 
+
+  /* CTA */
+  .cta-killer {
     @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300;
     box-shadow: var(--shadow-cta);
     transform-origin: center;
   }
   .cta-killer:hover {
     @apply scale-[1.02];
-    box-shadow: 
+    box-shadow:
       0 12px 40px 0 hsl(163 89% 58% / 0.5),
       0 0 0 1px hsl(163 89% 58% / 0.2),
       var(--shadow-glow-green);
@@ -118,31 +161,31 @@
   .cta-killer:active {
     @apply scale-[0.98];
   }
-  
-  /* Enhanced Card System */
-  .conversion-card { 
+
+  /* Card */
+  .conversion-card {
     @apply bg-card/80 backdrop-blur-sm p-6 rounded-lg border border-border/50;
     box-shadow: var(--shadow-card);
     transition: all 0.3s ease;
   }
   .conversion-card:hover {
     @apply border-border;
-    box-shadow: 
+    box-shadow:
       0 8px 32px 0 hsl(225 62% 7% / 0.8),
       0 0 0 1px hsl(225 27% 25% / 0.5);
   }
-  
-  /* Section Backgrounds */
+
+  /* Sezione con glow */
   .section-gradient {
-    background: 
+    background:
       radial-gradient(ellipse 600px 300px at 50% 0%, hsl(225 35% 20% / 0.1) 0%, transparent 70%),
       transparent;
   }
-  
-  /* Badge Glow */
+
+  /* Badge */
   .badge-glow {
     @apply bg-primary/20 text-primary border border-primary/30;
-    box-shadow: 
+    box-shadow:
       0 0 20px hsl(var(--primary) / 0.2),
       inset 0 1px 0 hsl(var(--primary) / 0.1);
   }
