@@ -5,49 +5,49 @@
 
 @layer base {
   :root {
-    /* GRADIENTE SCURO CHE SI ARMONIZZA CON L'IMMAGINE BLU */
-    --background: 220 50% 8%;           /* #0a1019 - Blu navy scuro */
-    --background-mid: 215 45% 12%;      /* #0f1824 - Blu navy medio */
-    --background-end: 210 40% 16%;      /* #162030 - Blu navy più chiaro */
-    --foreground: 0 0% 100%;            /* Bianco per testo */
+    /* GRADIENTE BLU SCURO CHE SI ARMONIZZA CON L'IMMAGINE */
+    --background-end: 210 70% 40%;    /* #337acc - Blu medio per il top */
+    --background-mid: 210 60% 25%;    /* #1e4a8a - Blu scuro medio */
+    --background: 210 50% 10%;        /* #1e3a5f - Blu navy molto scuro per il bottom */
+    --foreground: 0 0% 100%;          /* Bianco per testo */
     
     /* Brand Colors */
-    --primary: 225 100% 67%;            /* #436BFF */
+    --primary: 225 100% 67%;          /* #436BFF */
     --primary-foreground: 0 0% 100%;
-    --secondary: 163 89% 58%;           /* #2FE6B8 */
+    --secondary: 163 89% 58%;         /* #2FE6B8 */
     --secondary-foreground: 0 0% 100%;
     
     /* System Colors */
-    --card: 215 45% 12%;
+    --card: 210 60% 25%;
     --card-foreground: 0 0% 100%;
-    --border: 215 30% 25%;
-    --input: 215 30% 25%;
+    --border: 210 50% 35%;
+    --input: 210 50% 35%;
     --ring: 163 89% 58%;
-    --muted: 215 25% 30%;
-    --muted-foreground: 210 15% 75%;
-    --accent: 215 25% 30%;
+    --muted: 210 40% 45%;
+    --muted-foreground: 210 20% 80%;
+    --accent: 210 40% 45%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --popover: 215 45% 12%;
+    --popover: 210 60% 25%;
     --popover-foreground: 0 0% 100%;
     
     /* Shadows */
     --shadow-cta: 0 8px 32px 0 hsl(163 89% 58% / 0.4), 0 0 0 1px hsl(163 89% 58% / 0.1);
-    --shadow-card: 0 4px 20px 0 hsl(220 50% 8% / 0.6), 0 0 0 1px hsl(215 30% 25% / 0.3);
+    --shadow-card: 0 4px 20px 0 hsl(210 50% 10% / 0.6), 0 0 0 1px hsl(210 50% 35% / 0.3);
     --shadow-glow-cyan: 0 0 80px hsl(195 100% 75% / 0.15);
     --shadow-glow-green: 0 0 60px hsl(163 89% 58% / 0.1);
     
     --radius: 0.75rem;
     
     /* Sidebar */
-    --sidebar-background: 215 45% 12%;
+    --sidebar-background: 210 60% 25%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 220 50% 8%;
+    --sidebar-primary: 210 50% 10%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 25% 30%;
+    --sidebar-accent: 210 40% 45%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 215 30% 25%;
+    --sidebar-border: 210 50% 35%;
     --sidebar-ring: 163 89% 58%;
   }
 }
@@ -61,11 +61,11 @@
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
     
-    /* GRADIENTE SCURO CHE SI ARMONIZZA CON IMMAGINE BLU */
+    /* GRADIENTE BLU SCURO - Medio in alto, molto scuro in basso per fusione con immagine */
     background: linear-gradient(to bottom, 
-      hsl(var(--background)) 0%,        /* Blu navy scuro */
-      hsl(var(--background-mid)) 60%,   /* Blu navy medio */
-      hsl(var(--background-end)) 100%   /* Blu navy più chiaro */
+      hsl(var(--background-end)) 0%,   /* Blu medio in alto */
+      hsl(var(--background-mid)) 60%,  /* Blu scuro medio */
+      hsl(var(--background)) 100%      /* Blu navy scuro in basso */
     );
     
     background-color: hsl(var(--background));
@@ -143,14 +143,14 @@
   .conversion-card:hover {
     @apply border-border;
     box-shadow: 
-      0 8px 32px 0 hsl(220 50% 8% / 0.8),
-      0 0 0 1px hsl(215 30% 25% / 0.5);
+      0 8px 32px 0 hsl(210 50% 10% / 0.8),
+      0 0 0 1px hsl(210 50% 35% / 0.5);
   }
 
   /* Section */
   .section-gradient {
     background: 
-      radial-gradient(ellipse 600px 300px at 50% 0%, hsl(215 45% 12% / 0.1) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 300px at 50% 0%, hsl(210 60% 25% / 0.1) 0%, transparent 70%),
       transparent;
   }
 
