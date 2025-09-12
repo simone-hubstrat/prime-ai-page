@@ -63,7 +63,7 @@ const HeroKiller: React.FC = () => {
             <img 
               src={heroImage} 
               alt="Persona che lavora al computer con AI"
-              className="w-full h-auto rounded-lg shadow-[var(--shadow-card)]"
+              className="hero-image-natural shadow-[var(--shadow-card)]"
               loading="eager"
             />
           </div>
