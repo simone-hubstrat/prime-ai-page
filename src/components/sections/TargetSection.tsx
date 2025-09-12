@@ -5,7 +5,6 @@ import {
   Lightbulb,
   Target
 } from 'lucide-react';
-import targetImage from '@/assets/target-audience.jpg';
 
 const TargetSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -130,7 +129,7 @@ const TargetSection: React.FC = () => {
           <div className="relative scroll-reveal">
             <div className="relative rounded-2xl overflow-hidden shadow-glow hover-lift">
               <img 
-                src={targetImage} 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                 alt="Professionisti diversificati che lavorano"
                 className="w-full h-auto object-cover"
                 loading="lazy"

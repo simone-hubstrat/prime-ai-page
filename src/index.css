@@ -60,16 +60,15 @@
     
     /* GRADIENTE BLU SCURO CHE PARTE DAL BASSO E SI SCHIARISCE VERSO L'ALTO */
     background: linear-gradient(to top, 
-      #19223A 0%,        /* Base scura in basso */
-      #1D273E 15%,       /* Primo schiarimento */
-      #202A40 30%,       /* Secondo schiarimento */
-      #2C354B 50%,       /* Medio */
-      #414A5D 70%,       /* Più chiaro */
-      #495164 85%,       /* Ancora più chiaro */
-      #7B8492 100%       /* Più chiaro in alto */
+      hsl(230, 20%, 5%) 0%,     /* Blu molto scuro in alto per fondersi con l'immagine */
+      hsl(220, 25%, 8%) 20%,    /* Transizione graduale */
+      hsl(215, 30%, 12%) 40%,   /* Blu navy medio */
+      hsl(210, 35%, 16%) 60%,   /* Continua la transizione */
+      hsl(205, 40%, 20%) 80%,   /* Più chiaro verso il basso */
+      hsl(200, 45%, 25%) 100%   /* Base più chiara in fondo */
     );
     
-    background-color: #19223A;
+    background-color: hsl(230, 20%, 5%);
     min-height: 100vh;
   }
   /* IMMAGINE HERO - FUSIONE SOTTILE */
@@ -109,6 +108,48 @@
   .price-crossed { 
     @apply text-lg text-muted-foreground line-through; 
   }
+  
+  /* Gradient Section */
+  .gradient-section {
+    background: 
+      radial-gradient(ellipse 600px 300px at 50% 0%, hsl(215 45% 12% / 0.1) 0%, transparent 70%),
+      transparent;
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+      0 20px 40px 0 hsl(220 50% 8% / 0.4),
+      0 0 0 1px hsl(215 30% 25% / 0.3);
+  }
+  
+  /* Shadow Effects */
+  .shadow-elegant {
+    box-shadow: 
+      0 4px 20px 0 hsl(220 50% 8% / 0.3),
+      0 0 0 1px hsl(215 30% 25% / 0.2);
+  }
+  .shadow-glow {
+    box-shadow: 
+      0 0 40px hsl(195 100% 75% / 0.1),
+      0 4px 20px 0 hsl(220 50% 8% / 0.3);
+  }
+  
+  /* Scroll Reveal Animation */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
   /* CTA */
   .cta-killer { 
     @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300;
@@ -136,12 +177,6 @@
     box-shadow: 
       0 8px 32px 0 hsl(220 50% 8% / 0.8),
       0 0 0 1px hsl(215 30% 25% / 0.5);
-  }
-  /* Section */
-  .section-gradient {
-    background: 
-      radial-gradient(ellipse 600px 300px at 50% 0%, hsl(215 45% 12% / 0.1) 0%, transparent 70%),
-      transparent;
   }
   /* Badge */
   .badge-glow {
