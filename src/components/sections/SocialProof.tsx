@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle, Star, Users, Clock } from 'lucide-react';
+import benefitsImage from '@/assets/social-proof-new.png';
 
 const SocialProof: React.FC = () => {
   const benefits = [
@@ -75,7 +76,7 @@ const SocialProof: React.FC = () => {
           {/* Right - Image + Testimonials */}
           <div className="space-y-6">
             <img 
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              src={benefitsImage} 
               alt="Dashboard corso Prime AI"
               className="w-full h-auto rounded-lg shadow-[var(--shadow-card)]"
               loading="lazy"
