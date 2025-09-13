@@ -162,4 +162,45 @@
       0 0 20px hsl(var(--primary) / 0.2),
       inset 0 1px 0 hsl(var(--primary) / 0.1);
   }
+
+  /* Hero Image Perfect Gradient Integration */
+  .hero-image-container {
+    @apply relative;
+  }
+
+  .hero-image-blend {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-image-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, 
+      hsl(225 62% 7% / 0.2) 0%, 
+      hsl(225 52% 13% / 0.3) 35%,
+      hsl(249 27% 18% / 0.4) 65%,
+      hsl(263 35% 23% / 0.3) 100%
+    );
+    border-radius: 0.5rem;
+    mix-blend-mode: multiply;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .hero-image-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at 60% 40%,
+      hsl(var(--primary) / 0.1) 0%,
+      transparent 50%
+    );
+    border-radius: 0.5rem;
+    mix-blend-mode: screen;
+    z-index: 4;
+    pointer-events: none;
+  }
 }
