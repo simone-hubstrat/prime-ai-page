@@ -2,11 +2,13 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
+import BackgroundComponent from '@/components/ui/demo';
 import heroImage from '@/assets/hero-new.png';
 
 const HeroKiller: React.FC = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-16">
+    <section className="relative min-h-screen flex items-center justify-center px-4 py-16">
+      <BackgroundComponent />
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Ultra-Converting Copy */}
