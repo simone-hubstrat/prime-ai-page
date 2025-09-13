@@ -1,94 +1,89 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { AnimatedCounter } from '@/components/ui/animated-counter';
-import BackgroundHero from '@/components/ui/demo';
+import { Button } from '../ui/button';
+import { AnimatedCounter } from '../ui/animated-counter';
+import { BackgroundHero } from '../ui/background-hero';
 
-const HeroKiller: React.FC = () => {
+const HeroKiller = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-16">
-      {/* Background Gradient - esatto come richiesto */}
-      <div className="absolute inset-0 -z-10 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]" />
-      
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Ultra-Converting Copy */}
-          <div className="space-y-8">
-            <Badge variant="limited" className="w-fit">
-              🚀 OFFERTA LIMITATA
-            </Badge>
-            
-            <h1 className="hero-title">
-              Questa landing page è stata creata con l'AI. Vuoi imparare a farlo anche tu?
-            </h1>
-            
-            <p className="hero-subtitle">
-              Il corso Prime AI è pratico e completo per creare landing page efficaci in soli 10 mini lezioni, anche se parti da zero
-            </p>
-            
-            {/* Value Props */}
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="conversion-card text-center">
-                <div className="text-2xl font-bold text-secondary mb-1">€27,97</div>
-                <div className="text-sm text-muted-foreground">Investimento minimo</div>
-              </div>
-              <div className="conversion-card text-center">
-                <div className="text-2xl font-bold text-primary mb-1">10 lezioni</div>
-                <div className="text-sm text-muted-foreground">Solo 2 ore totali</div>
-              </div>
-              <div className="conversion-card text-center">
-                <div className="text-2xl font-bold text-foreground mb-1">Zero codice</div>
-                <div className="text-sm text-muted-foreground">Anche per principianti</div>
-              </div>
+    <section className="relative min-h-screen py-20 px-4 flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-background-mid to-background-end">
+      <BackgroundHero />
+      <div className="hero-content container mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        {/* Left Column - Content */}
+        <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6 inline-block">
+            🚀 OFFERTA LIMITATA
+          </div>
+          
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Questa landing page è stata creata con l'AI. Vuoi imparare a farlo anche tu?
+          </h1>
+          
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
+            Il corso Prime AI è pratico e completo per creare landing page efficaci in soli 10 mini lezioni, anche se parti da zero
+          </p>
+          
+          <div className="flex items-center gap-4 mb-8 justify-center lg:justify-start">
+            <div className="text-3xl font-bold text-primary">€27,97</div>
+            <div className="text-sm text-muted-foreground">
+              <div>Investimento minimo</div>
+              <div>10 lezioni</div>
             </div>
-            
-            {/* Price + CTA */}
-            <div className="conversion-card bg-muted/50">
-              <div className="flex items-baseline gap-4 mb-4">
-                <span className="price-crossed">€49,99</span>
-                <div className="price-display">
-                  €<AnimatedCounter from={49} to={27} duration={1500} />,97
-                </div>
-              </div>
-              
-              <Button size="xl" className="w-full cta-primary mb-4">
-                Inizia ora - Accedi al corso
-              </Button>
-              
-              <p className="text-sm text-muted-foreground text-center">
-                Accesso immediato • Nessuna competenza tecnica richiesta
-              </p>
+            <div className="text-sm text-muted-foreground">
+              <div>Solo 2 ore totali</div>
+              <div>Zero codice</div>
+            </div>
+            <div className="text-sm text-muted-foreground">
+              <div>Anche per principianti</div>
             </div>
           </div>
           
-          {/* Right - Hero Image */}
-          <div className="relative">
-            <div className="hero-image-container">
-              <img 
-                src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Persona che lavora al computer con AI"
-                className="hero-image relative z-20"
-              />
-              
-              {/* Social Proof */}
-              <div className="absolute -bottom-4 -left-4 bg-background/95 backdrop-blur-sm p-4 rounded-xl shadow-glow border z-30">
-                <div className="text-center">
-                  <div className="text-sm font-semibold text-secondary mb-1">
-                    Già <AnimatedCounter from={0} to={847} duration={2000} />+ studenti attivi
-                  </div>
-                  <div className="flex items-center justify-center gap-1 text-yellow-500">
-                    ⭐⭐⭐⭐⭐
-                  </div>
-                  <div className="text-xs text-muted-foreground">
-                    4.9/5 (127 recensioni)
-                  </div>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start mb-8">
+            <div className="text-lg text-muted-foreground line-through">€49,99</div>
+            <div className="text-4xl font-bold text-primary">€27,97</div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <Button size="lg" className="text-lg px-8 py-6 shadow-glow hover:shadow-glow hover:scale-105 transition-all duration-300">
+              Inizia ora - Accedi al corso
+            </Button>
+          </div>
+          
+          <p className="text-sm text-muted-foreground mt-4 text-center lg:text-left">
+            Accesso immediato • Nessuna competenza tecnica richiesta
+          </p>
+        </div>
+        
+        {/* Right Column - Image */}
+        <div className="order-1 lg:order-2 relative">
+          <div className="relative max-w-md mx-auto lg:max-w-full">
+            <img 
+              src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png" 
+              alt="Persona che lavora al computer con AI"
+              className="w-full h-auto rounded-2xl shadow-elegant hover:shadow-glow transition-all duration-500 hover:scale-105 relative z-20"
+            />
+            
+            {/* Social Proof */}
+            <div className="absolute -bottom-4 -left-4 bg-background/95 backdrop-blur-sm p-4 rounded-xl shadow-glow border z-30">
+              <div className="text-center">
+                <div className="text-sm font-semibold text-secondary mb-1">
+                  Già <AnimatedCounter from={0} to={847} duration={2000} />+ studenti attivi
+                </div>
+                <div className="flex items-center justify-center gap-1 text-yellow-500">
+                  ⭐⭐⭐⭐⭐
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  4.9/5 (127 recensioni)
                 </div>
               </div>
-              
-              <div className="absolute -top-4 -right-4 bg-background/95 backdrop-blur-sm p-3 rounded-xl shadow-glow border z-30">
-                <div className="text-center">
-                  <div className="text-xs text-muted-foreground mb-1">Già 847+ studenti attivi</div>
-                  <div className="text-xs text-muted-foreground">4.9/5 (127 recensioni)</div>
+            </div>
+            
+            <div className="absolute -top-4 -right-4 bg-background/95 backdrop-blur-sm p-3 rounded-xl shadow-glow border z-30">
+              <div className="text-center">
+                <div className="text-xs text-muted-foreground mb-1">
+                  Già 847+ studenti attivi
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  4.9/5 (127 recensioni)
                 </div>
               </div>
             </div>
