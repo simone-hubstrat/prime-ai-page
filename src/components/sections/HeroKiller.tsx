@@ -3,12 +3,13 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
 import BackgroundHero from '@/components/ui/demo';
-import heroImage from '@/assets/hero-new.png';
 
 const HeroKiller: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-16">
-      <BackgroundHero />
+      {/* Background Gradient - esatto come richiesto */}
+      <div className="absolute inset-0 -z-10 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]" />
+      
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Ultra-Converting Copy */}
@@ -70,22 +71,24 @@ const HeroKiller: React.FC = () => {
               />
               
               {/* Social Proof */}
-              <div className="social-proof-card">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="flex -space-x-2">
-                    {[1,2,3,4,5].map((i) => (
-                      <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 border-2 border-white" />
-                    ))}
+              <div className="absolute -bottom-4 -left-4 bg-background/95 backdrop-blur-sm p-4 rounded-xl shadow-glow border z-30">
+                <div className="text-center">
+                  <div className="text-sm font-semibold text-secondary mb-1">
+                    Già <AnimatedCounter from={0} to={847} duration={2000} />+ studenti attivi
                   </div>
-                  <span className="text-sm font-medium">Già <AnimatedCounter from={800} to={847} duration={2000} />+ studenti attivi</span>
+                  <div className="flex items-center justify-center gap-1 text-yellow-500">
+                    ⭐⭐⭐⭐⭐
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    4.9/5 (127 recensioni)
+                  </div>
                 </div>
-                <div className="flex items-center gap-1">
-                  <div className="flex text-yellow-400">
-                    {[1,2,3,4,5].map((i) => (
-                      <span key={i}>⭐</span>
-                    ))}
-                  </div>
-                  <span className="text-sm text-muted-foreground ml-2">4.9/5 (127 recensioni)</span>
+              </div>
+              
+              <div className="absolute -top-4 -right-4 bg-background/95 backdrop-blur-sm p-3 rounded-xl shadow-glow border z-30">
+                <div className="text-center">
+                  <div className="text-xs text-muted-foreground mb-1">Già 847+ studenti attivi</div>
+                  <div className="text-xs text-muted-foreground">4.9/5 (127 recensioni)</div>
                 </div>
               </div>
             </div>
