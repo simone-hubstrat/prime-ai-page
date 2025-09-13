@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
+import heroImage from '@/assets/hero-new.png';
 
 const HeroKiller: React.FC = () => {
   return (
@@ -58,11 +59,11 @@ const HeroKiller: React.FC = () => {
           </div>
           
           {/* Right - Hero Image */}
-          <div className="relative">
+          <div className="relative hero-image-container">
             <img 
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              src={heroImage} 
               alt="Persona che lavora al computer con AI"
-              className="hero-image-natural shadow-[var(--shadow-card)]"
+              className="hero-image-blend w-full h-auto rounded-lg shadow-[var(--shadow-card)]"
               loading="eager"
             />
           </div>
