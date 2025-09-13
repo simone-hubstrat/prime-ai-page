@@ -1,5 +1,19 @@
-export default function Component() {
+import Hero from "@/components/ui/neural-network-hero";
+
+export default function DemoOne() {
   return (
-    <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+    <div className="w-screen h-screen flex flex-col relative">
+      <Hero 
+        title="Where algorithms become art."
+        description="A minimal hero with a neural canvas — crisp, elegant, and quietly expressive. Built with React, Three.js, and a custom CPPN shader."
+        badgeText="Generative Surfaces"
+        badgeLabel="New"
+        ctaButtons={[
+          { text: "Get started", href: "#get-started", primary: true },
+          { text: "View showcase", href: "#showcase" }
+        ]}
+        microDetails={["Low‑weight font", "Tight tracking", "Subtle motion"]}
+      />
+    </div>
   );
 }
