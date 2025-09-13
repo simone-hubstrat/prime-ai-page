@@ -227,6 +227,7 @@ export default function Hero({
 
   return (
     <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden">
+      {/* AnimatedBackground component for neural network effect */}
       <AnimatedBackground />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16">
