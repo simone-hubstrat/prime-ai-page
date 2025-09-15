@@ -26,15 +26,15 @@ const HeroKiller: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-4">
               <div className="conversion-card text-center">
                 <div className="text-2xl font-bold text-secondary mb-1">€27,97</div>
-                <div className="text-sm text-muted-foreground">Investimento minimo</div>
+                <div className="text-sm text-muted-foreground">Investimento minimo, valore massimo</div>
               </div>
               <div className="conversion-card text-center">
-                <div className="text-2xl font-bold text-primary mb-1">10 lezioni</div>
-                <div className="text-sm text-muted-foreground">Solo 2 ore totali</div>
+                <div className="text-2xl font-bold text-primary mb-1">10 mini lezioni</div>
+                <div className="text-sm text-muted-foreground">Dalla teoria alla tua prima landing</div>
               </div>
               <div className="conversion-card text-center">
                 <div className="text-2xl font-bold text-foreground mb-1">Zero codice</div>
-                <div className="text-sm text-muted-foreground">Anche per principianti</div>
+                <div className="text-sm text-muted-foreground">Anche se non sei un programmatore</div>
               </div>
             </div>
             
