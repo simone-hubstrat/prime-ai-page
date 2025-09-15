@@ -6,11 +6,11 @@
 
 @layer base {
   :root {
-    /* Dark Gradient Design System - Tech/AI Landing Page */
-    /* Base Colors from Spec: #071025 → #0f1a32 → #2b1e3a */
-    --background: 225 62% 7%;           /* #071025 - Almost black-blue */
-    --background-mid: 225 52% 13%;      /* #0f1a32 - Mid-tone */
-    --background-end: 249 27% 18%;      /* #2b1e3a - Blue-violet end */
+    /* Simple Clean Gradient Design System */
+    /* Simple gradient: #0a0e1a → #1a1f35 → #2d1b3d */
+    --background: 230 46% 8%;           /* #0a0e1a - Dark blue-black start */
+    --background-mid: 230 35% 17%;      /* #1a1f35 - Mid blue-gray */
+    --background-end: 254 27% 18%;      /* #2d1b3d - Purple-blue end */
     --foreground: 0 0% 100%;            /* #FFFFFF - Pure white text */
     
     /* Brand Colors */
@@ -61,22 +61,12 @@
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
     
-    /* Multi-Layer Dark Gradient Background */
-    background: 
-      /* Subtle vignette overlay */
-      radial-gradient(circle at 50% 50%, transparent 40%, hsl(225 62% 7% / 0.4) 100%),
-      /* Top-right cyan glow */
-      radial-gradient(ellipse 1500px 800px at 85% 15%, hsl(195 100% 75% / 0.08) 0%, transparent 50%),
-      /* Bottom-left green glow */
-      radial-gradient(ellipse 1000px 600px at 15% 85%, hsl(163 89% 58% / 0.06) 0%, transparent 50%),
-      /* Central subtle glow for depth */
-      radial-gradient(ellipse 800px 400px at 50% 50%, hsl(225 52% 13% / 0.3) 0%, transparent 60%),
-      /* Main gradient base */
-      linear-gradient(135deg, 
-        hsl(var(--background)) 0%, 
-        hsl(var(--background-mid)) 35%,
-        hsl(var(--background-end)) 100%
-      );
+    /* Simple Clean Gradient Background */
+    background: linear-gradient(135deg, 
+      hsl(var(--background)) 0%, 
+      hsl(var(--background-mid)) 50%,
+      hsl(var(--background-end)) 100%
+    );
     
     /* Fallback for older browsers */
     background-color: hsl(var(--background));
@@ -85,19 +75,13 @@
     min-height: 100vh;
   }
   
-  /* Responsive background adjustments */
-  @media (max-width: 768px) {
-    body {
-      background: 
-        radial-gradient(circle at 50% 50%, transparent 60%, hsl(225 62% 7% / 0.3) 100%),
-        radial-gradient(ellipse 1000px 600px at 80% 20%, hsl(195 100% 75% / 0.06) 0%, transparent 50%),
-        radial-gradient(ellipse 800px 500px at 20% 80%, hsl(163 89% 58% / 0.04) 0%, transparent 50%),
-        linear-gradient(135deg, 
-          hsl(var(--background)) 0%, 
-          hsl(var(--background-mid)) 40%,
-          hsl(var(--background-end)) 100%
-        );
-    }
+  /* Hero Image Integration */
+  .hero-image-natural {
+    object-fit: cover;
+    object-position: center right;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
   }
 }
 
@@ -137,7 +121,7 @@
   
   /* Enhanced Card System */
   .conversion-card { 
-    @apply bg-card/90 backdrop-blur-sm p-6 rounded-lg border border-border/50 relative z-10;
+    @apply bg-card/80 backdrop-blur-sm p-6 rounded-lg border border-border/50;
     box-shadow: var(--shadow-card);
     transition: all 0.3s ease;
   }
@@ -161,51 +145,5 @@
     box-shadow: 
       0 0 20px hsl(var(--primary) / 0.2),
       inset 0 1px 0 hsl(var(--primary) / 0.1);
-  }
-
-  /* Hero Image Perfect Gradient Integration */
-  .hero-image-container {
-    @apply relative z-10;
-  }
-
-  .hero-image-blend {
-    position: relative;
-    z-index: 20;
-  }
-
-  .hero-image-container::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, 
-      hsl(225 62% 7% / 0.2) 0%, 
-      hsl(225 52% 13% / 0.3) 35%,
-      hsl(249 27% 18% / 0.4) 65%,
-      hsl(263 35% 23% / 0.3) 100%
-    );
-    border-radius: 0.5rem;
-    mix-blend-mode: multiply;
-    z-index: 21;
-    pointer-events: none;
-  }
-
-  .hero-image-container::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      ellipse at 60% 40%,
-      hsl(var(--primary) / 0.1) 0%,
-      transparent 50%
-    );
-    border-radius: 0.5rem;
-    mix-blend-mode: screen;
-    z-index: 22;
-    pointer-events: none;
-  }
-
-  /* Ensure content is above background components */
-  .hero-content {
-    @apply relative z-10;
   }
 }
