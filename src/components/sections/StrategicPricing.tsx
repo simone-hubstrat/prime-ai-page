@@ -3,8 +3,11 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Clock, Zap, Shield } from 'lucide-react';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
+import { useCountdown } from '@/hooks/use-countdown';
 
 const StrategicPricing: React.FC = () => {
+  const countdown = useCountdown(47, 23);
+
   const features = [
     "10 video lezioni step-by-step (2 ore totali)",
     "Template pronti per ogni settore",
@@ -18,7 +21,7 @@ const StrategicPricing: React.FC = () => {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4 max-w-4xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-up">
           <Badge variant="limited" className="mb-4">
             ⚡ SOLO OGGI - PREZZO LANCIO
           </Badge>
@@ -31,7 +34,7 @@ const StrategicPricing: React.FC = () => {
         </div>
         
         {/* Main Pricing Card */}
-        <div className="conversion-card max-w-md mx-auto bg-gradient-to-br from-background to-muted/30 border-2 border-secondary/20">
+        <div className="conversion-card max-w-md mx-auto bg-gradient-to-br from-background to-muted/30 border-2 border-secondary/20 hover:scale-[1.02] transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
           <div className="text-center mb-6">
             <div className="flex items-center justify-center gap-3 mb-2">
               <span className="price-crossed">€49,99</span>
@@ -46,7 +49,7 @@ const StrategicPricing: React.FC = () => {
           {/* Features List */}
           <div className="space-y-3 mb-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-start gap-2">
+              <div key={index} className="flex items-start gap-2 hover:translate-x-1 transition-transform duration-200" data-aos="fade-right" data-aos-delay={300 + index * 50}>
                 <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-foreground">{feature}</span>
               </div>
@@ -54,7 +57,7 @@ const StrategicPricing: React.FC = () => {
           </div>
           
           {/* Main CTA */}
-          <Button variant="secondary" size="lg" className="w-full mb-4">
+          <Button variant="secondary" size="lg" className="w-full mb-4 hover:scale-[1.02] transition-all duration-300">
             Sì, voglio imparare - Acquista il corso
           </Button>
           
@@ -76,9 +79,9 @@ const StrategicPricing: React.FC = () => {
         </div>
         
         {/* Additional Urgency */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-8" data-aos="fade-up" data-aos-delay="600">
           <p className="text-sm text-muted-foreground mb-2">
-            ⏰ Questa offerta scade tra 47 ore e 23 minuti
+            ⏰ Questa offerta scade tra {countdown.displayTime}
           </p>
           <p className="text-xs text-muted-foreground">
             Dopo tornerà al prezzo pieno di €49,99

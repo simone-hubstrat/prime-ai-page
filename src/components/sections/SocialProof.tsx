@@ -1,7 +1,10 @@
 import React from 'react';
 import { CheckCircle, Star, Users, Clock } from 'lucide-react';
+import { useCountdown } from '@/hooks/use-countdown';
 
 const SocialProof: React.FC = () => {
+  const countdown = useCountdown(47, 23);
+
   const benefits = [
     "Crea landing page professionali in minuti, non giorni",
     "Copywriting AI che converte automaticamente",
@@ -28,7 +31,7 @@ const SocialProof: React.FC = () => {
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Social Proof Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Users className="w-5 h-5 text-secondary" />
             <span className="text-lg font-semibold text-foreground">Già 847+ studenti attivi</span>
@@ -43,7 +46,7 @@ const SocialProof: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Benefits */}
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-right">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Perché questo corso funziona davvero?
@@ -55,7 +58,7 @@ const SocialProof: React.FC = () => {
             
             <div className="space-y-4">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
+                <div key={index} className="flex items-start gap-3 hover:translate-x-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay={index * 100}>
                   <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
                   <span className="text-foreground font-medium">{benefit}</span>
                 </div>
@@ -63,28 +66,28 @@ const SocialProof: React.FC = () => {
             </div>
             
             {/* Urgency Element */}
-            <div className="conversion-card bg-secondary/10 border-secondary/20">
+            <div className="conversion-card bg-secondary/10 border-secondary/20 hover:scale-[1.02] transition-transform duration-300" data-aos="zoom-in" data-aos-delay="400">
               <div className="flex items-center gap-2 mb-2">
                 <Clock className="w-5 h-5 text-secondary" />
                 <span className="font-bold text-foreground">Offerta scade tra:</span>
               </div>
-              <div className="text-2xl font-bold text-secondary">47 ore 23 minuti</div>
+              <div className="text-2xl font-bold text-secondary">{countdown.displayTime}</div>
             </div>
           </div>
           
           {/* Right - Image + Testimonials */}
-          <div className="space-y-6">
+          <div className="space-y-6" data-aos="fade-left">
             <img 
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              src="https://vg-bunny-cdn.b-cdn.net/public/or2mjx1q_.png"
               alt="Dashboard corso Prime AI"
-              className="w-full h-auto rounded-lg shadow-[var(--shadow-card)]"
+              className="w-full h-auto rounded-lg shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500"
               loading="lazy"
             />
             
             {/* Testimonials */}
             <div className="space-y-4">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="conversion-card">
+                <div key={index} className="conversion-card hover:scale-[1.02] transition-transform duration-300" data-aos="fade-up" data-aos-delay={200 + index * 100}>
                   <div className="flex items-center gap-1 mb-2">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />

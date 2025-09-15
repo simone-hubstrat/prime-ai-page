@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import HeroKiller from '@/components/sections/HeroKiller';
 import SocialProof from '@/components/sections/SocialProof';
+import TargetSection from '@/components/sections/TargetSection';
 import StrategicPricing from '@/components/sections/StrategicPricing';
 import FinalKiller from '@/components/sections/FinalKiller';
 import SimpleFooter from '@/components/sections/SimpleFooter';
@@ -47,6 +48,9 @@ const Index: React.FC = () => {
       
       {/* 2. Social Proof + Tangible Benefits - Trust Building */}
       <SocialProof />
+      
+      {/* 3. Target Section - Who This Is For */}
+      <TargetSection />
       
       {/* 3. Strategic Pricing + Urgency - Decision Making */}
       <StrategicPricing />
