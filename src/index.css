@@ -88,23 +88,23 @@
 @layer components {
   /* Dark Theme Typography - High Contrast */
   .hero-title { 
-    @apply text-4xl md:text-6xl font-extrabold text-foreground leading-tight;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight;
     text-shadow: 0 0 40px hsl(var(--foreground) / 0.1);
   }
   .hero-subtitle { 
-    @apply text-lg md:text-xl text-muted-foreground leading-relaxed; 
+    @apply text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed; 
   }
   .price-display { 
-    @apply text-5xl md:text-7xl font-black text-secondary;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-secondary;
     filter: drop-shadow(var(--shadow-glow-green));
   }
   .price-crossed { 
-    @apply text-lg text-muted-foreground line-through; 
+    @apply text-base sm:text-lg text-muted-foreground line-through; 
   }
   
   /* Enhanced CTA System with Glow */
   .cta-killer { 
-    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300;
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300;
     box-shadow: var(--shadow-cta);
     transform-origin: center;
   }
@@ -121,7 +121,7 @@
   
   /* Enhanced Card System */
   .conversion-card { 
-    @apply bg-card/80 backdrop-blur-sm p-6 rounded-lg border border-border/50;
+    @apply bg-card/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-border/50;
     box-shadow: var(--shadow-card);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }

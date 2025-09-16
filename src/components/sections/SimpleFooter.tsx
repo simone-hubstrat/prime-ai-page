@@ -2,10 +2,10 @@ import React from 'react';
 
 const SimpleFooter: React.FC = () => {
   return (
-    <footer className="py-8 border-t border-border bg-muted/30">
-      <div className="container mx-auto px-4 text-center">
-        <div className="space-y-4">
-          <div className="text-sm text-muted-foreground">
+    <footer className="py-6 sm:py-8 border-t border-border bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="space-y-3 sm:space-y-4">
+          <div className="text-xs sm:text-sm text-muted-foreground">
             <a 
               href="https://hubstrat.it/" 
               target="_blank" 

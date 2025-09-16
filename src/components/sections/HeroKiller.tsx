@@ -22,11 +22,11 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="min-h-screen flex items-center justify-center px-4 py-16 relative z-10">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative z-10">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left - Ultra-Converting Copy */}
-            <div className="space-y-8" data-aos="fade-right">
+            <div className="space-y-6 sm:space-y-8" data-aos="fade-right">
               <Badge variant="limited" className="w-fit">
                 🚀 OFFERTA LIMITATA
               </Badge>
@@ -40,24 +40,24 @@ const HeroKiller: React.FC = () => {
               </p>
               
               {/* Value Props */}
-              <div className="grid md:grid-cols-3 gap-4" data-aos="fade-up" data-aos-delay="200">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4" data-aos="fade-up" data-aos-delay="200">
                 <div className="conversion-card text-center hover:scale-105 transition-transform duration-300">
-                  <div className="text-2xl font-bold text-secondary mb-1">€27,97</div>
-                  <div className="text-sm text-muted-foreground">Investimento minimo, valore massimo</div>
+                  <div className="text-xl sm:text-2xl font-bold text-secondary mb-1">€27,97</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Investimento minimo, valore massimo</div>
                 </div>
                 <div className="conversion-card text-center hover:scale-105 transition-transform duration-300">
-                  <div className="text-2xl font-bold text-primary mb-1">10 mini lezioni</div>
-                  <div className="text-sm text-muted-foreground">Dalla teoria alla tua prima landing</div>
+                  <div className="text-xl sm:text-2xl font-bold text-primary mb-1">10 mini lezioni</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Dalla teoria alla tua prima landing</div>
                 </div>
                 <div className="conversion-card text-center hover:scale-105 transition-transform duration-300">
-                  <div className="text-2xl font-bold text-foreground mb-1">Zero codice</div>
-                  <div className="text-sm text-muted-foreground">Anche se non sei un programmatore</div>
+                  <div className="text-xl sm:text-2xl font-bold text-foreground mb-1">Zero codice</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground sm:col-span-2 lg:col-span-1">Anche se non sei un programmatore</div>
                 </div>
               </div>
               
               {/* Price + CTA */}
               <div className="conversion-card bg-card/80 backdrop-blur-sm" data-aos="zoom-in" data-aos-delay="400">
-                <div className="flex items-baseline gap-4 mb-4">
+                <div className="flex items-baseline justify-center gap-3 sm:gap-4 mb-4">
                   <span className="price-crossed">€49,99</span>
                   <div className="price-display">
                     €<AnimatedCounter from={49} to={27} duration={1500} />,97
@@ -68,13 +68,13 @@ const HeroKiller: React.FC = () => {
                   Inizia ora - Accedi al corso
                 </Button>
                 
-                <p className="text-sm text-center text-muted-foreground mt-3">
+                <p className="text-xs sm:text-sm text-center text-muted-foreground mt-3">
                   Accesso immediato • Nessuna competenza tecnica richiesta
                 </p>
                 
                 {/* Countdown */}
                 <div className="text-center mt-4 p-3 bg-secondary/10 rounded-lg border border-secondary/20">
-                  <p className="text-secondary font-semibold text-sm">
+                  <p className="text-secondary font-semibold text-xs sm:text-sm">
                     ⏰ Offerta scade tra: {countdown.displayTime}
                   </p>
                 </div>
@@ -82,11 +82,11 @@ const HeroKiller: React.FC = () => {
             </div>
             
             {/* Right - Hero Image */}
-            <div className="relative" data-aos="fade-left" data-aos-delay="300">
+            <div className="relative order-first lg:order-last" data-aos="fade-left" data-aos-delay="300">
               <img 
                 src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
                 alt="Persona che lavora al computer con AI"
-                className="hero-image-natural shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500"
+                className="w-full h-auto rounded-lg shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500"
                 loading="eager"
               />
             </div>
