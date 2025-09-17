@@ -34,11 +34,11 @@ export const BackgroundGradientAnimation = ({
   containerClassName?: string;
 }) => {
   const interactiveRef = useRef<HTMLDivElement>(null);
-
   const [curX, setCurX] = useState(0);
   const [curY, setCurY] = useState(0);
   const [tgX, setTgX] = useState(0);
   const [tgY, setTgY] = useState(0);
+
   useEffect(() => {
     document.body.style.setProperty(
       "--gradient-background-start",
@@ -69,7 +69,6 @@ export const BackgroundGradientAnimation = ({
         curX
       )}px, ${Math.round(curY)}px)`;
     }
-
     move();
   }, [tgX, tgY]);
 
@@ -89,7 +88,7 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        "h-screen w-full relative overflow-hidden bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+        "min-h-screen w-full relative overflow-x-hidden bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName
       )}
     >
@@ -163,7 +162,6 @@ export const BackgroundGradientAnimation = ({
             `opacity-100`
           )}
         ></div>
-
         {interactive && (
           <div
             ref={interactiveRef}
