@@ -28,7 +28,7 @@ const SocialProof: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-muted/30 w-full overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-muted/30 w-full overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         {/* Social Proof Header */}
         <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
@@ -43,7 +43,6 @@ const SocialProof: React.FC = () => {
             <span className="ml-2 text-sm sm:text-base text-muted-foreground">4.9/5 (127 recensioni)</span>
           </div>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left - Benefits */}
           <div className="space-y-6 sm:space-y-8 w-full" data-aos="fade-right">
