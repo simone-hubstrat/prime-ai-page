@@ -22,22 +22,20 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative w-full overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 relative z-10 w-full">
         <div className="container mx-auto max-w-7xl w-full">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center w-full">
             {/* Left - Ultra-Converting Copy */}
-            <div className="space-y-6 sm:space-y-8 w-full" data-aos="fade-right">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8 w-full" data-aos="fade-right">
               <Badge variant="limited" className="w-fit">
                 OFFERTA LIMITATA
               </Badge>
               <h1 className="hero-title">
                 Questa landing page è stata creata con l'AI. Vuoi imparare a farlo anche tu?
               </h1>
-              
               <p className="hero-subtitle">
                 Il corso Prime AI è pratico e completo per creare landing page efficaci in soli 10 mini lezioni, anche se parti da zero
               </p>
-              
               {/* Value Props */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full" data-aos="fade-up" data-aos-delay="200">
                 <div className="conversion-card text-center hover:scale-105 transition-transform duration-300 min-w-0">
@@ -53,7 +51,6 @@ const HeroKiller: React.FC = () => {
                   <div className="text-xs sm:text-sm text-muted-foreground break-words">Anche se non sei un programmatore</div>
                 </div>
               </div>
-              
               {/* Price + CTA */}
               <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0" data-aos="zoom-in" data-aos-delay="400">
                 <div className="flex items-baseline justify-center gap-3 sm:gap-4 mb-4">
@@ -62,15 +59,12 @@ const HeroKiller: React.FC = () => {
                     €<AnimatedCounter from={49} to={27} duration={1500} />,97
                   </div>
                 </div>
-                
                 <Button variant="secondary" size="lg" className="w-full hover:scale-[1.02] transition-all duration-300">
                   Inizia ora - Accedi al corso
                 </Button>
-                
                 <p className="text-xs sm:text-sm text-center text-muted-foreground mt-3">
                   Accesso immediato • Nessuna competenza tecnica richiesta
                 </p>
-                
                 {/* Countdown */}
                 <div className="text-center mt-4 p-3 bg-secondary/10 rounded-lg border border-secondary/20 w-full">
                   <p className="text-secondary font-semibold text-xs sm:text-sm">
@@ -79,13 +73,12 @@ const HeroKiller: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             {/* Right - Hero Image */}
             <div className="relative order-last w-full max-w-lg mx-auto lg:max-w-none" data-aos="fade-left" data-aos-delay="300">
               <img 
                 src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
                 alt="Persona che lavora al computer con AI"
-                className="w-full h-auto rounded-lg shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500 max-w-full"
+                className="w-full h-auto object-contain rounded-lg shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500 max-w-full"
                 loading="eager"
               />
             </div>
