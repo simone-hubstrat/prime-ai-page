@@ -22,11 +22,11 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-36 pb-10 sm:pb-16 lg:pb-20">
+      <section className="w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-28 lg:pt-36 pb-12 sm:pb-20 lg:pb-32">
         <div className="container mx-auto max-w-7xl w-full">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center w-full">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-center">
             {/* Left */}
-            <div className="space-y-4 sm:space-y-6 lg:space-y-8 w-full" data-aos="fade-right">
+            <div className="space-y-6 sm:space-y-8 lg:space-y-10 w-full" data-aos="fade-right">
               <Badge variant="limited" className="w-fit">
                 OFFERTA LIMITATA
               </Badge>
@@ -36,23 +36,22 @@ const HeroKiller: React.FC = () => {
               <p className="hero-subtitle">
                 Il corso Prime AI è pratico e completo per creare landing page efficaci in soli 10 mini lezioni, anche se parti da zero
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full" data-aos="fade-up" data-aos-delay="200">
-                <div className="conversion-card text-center hover:scale-105 transition-transform duration-300 min-w-0">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full">
+                <div className="conversion-card text-center">
                   <div className="text-xl sm:text-2xl font-bold text-secondary mb-1">€27,97</div>
                   <div className="text-xs sm:text-sm text-muted-foreground break-words">Investimento minimo, valore massimo</div>
                 </div>
-                <div className="conversion-card text-center hover:scale-105 transition-transform duration-300 min-w-0">
+                <div className="conversion-card text-center">
                   <div className="text-xl sm:text-2xl font-bold text-primary mb-1">10 mini lezioni</div>
                   <div className="text-xs sm:text-sm text-muted-foreground break-words">Dalla teoria alla tua prima landing</div>
                 </div>
-                <div className="conversion-card text-center hover:scale-105 transition-transform duration-300 min-w-0 sm:col-span-3 lg:col-span-1">
+                <div className="conversion-card text-center sm:col-span-3 lg:col-span-1">
                   <div className="text-xl sm:text-2xl font-bold text-foreground mb-1">Zero codice</div>
                   <div className="text-xs sm:text-sm text-muted-foreground break-words">Anche se non sei un programmatore</div>
                 </div>
               </div>
-              {/* Price + CTA */}
-              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-6 sm:mt-10" data-aos="zoom-in" data-aos-delay="400">
-                <div className="flex items-baseline justify-center gap-3 sm:gap-4 mb-4">
+              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-10" data-aos="zoom-in">
+                <div className="flex items-baseline justify-center gap-3 mb-4">
                   <span className="price-crossed">€49,99</span>
                   <div className="price-display">
                     €<AnimatedCounter from={49} to={27} duration={1500} />,97
@@ -72,11 +71,11 @@ const HeroKiller: React.FC = () => {
               </div>
             </div>
             {/* Right - Hero Image */}
-            <div className="relative order-last w-full max-w-lg mx-auto lg:max-w-none" data-aos="fade-left" data-aos-delay="300">
+            <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
               <img 
                 src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
                 alt="Persona che lavora al computer con AI"
-                className="w-full h-auto object-contain rounded-lg shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500 max-w-full"
+                className="w-full h-auto object-contain rounded-lg shadow-[var(--shadow-card)]"
                 loading="eager"
               />
             </div>
