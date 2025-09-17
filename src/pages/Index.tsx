@@ -42,7 +42,7 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-background overflow-x-hidden">
+    <main className="min-h-screen bg-background">
       {/* 1. Hero Killer - Immediate Conversion */}
       <HeroKiller />
       
@@ -52,15 +52,15 @@ const Index: React.FC = () => {
       {/* 3. Target Section - Who This Is For */}
       <TargetSection />
       
-      {/* 4. Strategic Pricing + Urgency - Decision Making */}
+      {/* 3. Strategic Pricing + Urgency - Decision Making */}
       <StrategicPricing />
       
-      {/* 5. Final CTA + Guarantees - Closing Sale */}
+      {/* 4. Final CTA + Guarantees - Closing Sale */}
       <FinalKiller />
       
       {/* Simple Footer */}
       <SimpleFooter />
-    </div>
+    </main>
   );
 };
 
