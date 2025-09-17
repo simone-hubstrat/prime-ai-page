@@ -158,3 +158,16 @@
     transform: translateY(-4px);
   }
 }
+@media (max-height: 700px) {
+  .hero-section {
+    min-height: auto !important;
+    padding-bottom: 6rem !important;
+  }
+}
+
+@media (max-height: 600px) {
+  .hero-section {
+    padding-top: 2rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
