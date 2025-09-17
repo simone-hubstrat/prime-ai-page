@@ -8,7 +8,7 @@ const FinalKiller: React.FC = () => {
   const countdown = useCountdown(47, 23);
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-secondary/5 to-primary/5 w-full overflow-hidden">
+    <section className="relative w-full py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-secondary/5 to-primary/5 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center w-full">
         <Badge variant="limited" className="mb-6" data-aos="fade-down">
           🔥 ULTIMA POSSIBILITÀ
