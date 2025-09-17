@@ -56,10 +56,10 @@ const TargetSection: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 lg:py-20 xl:py-32 section-gradient w-full overflow-hidden">
+    <section ref={sectionRef} className="py-8 sm:py-12 lg:py-16 xl:py-24 section-gradient w-full overflow-visible">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 scroll-reveal" data-aos="fade-up">
+        <div className="text-center mb-8 sm:mb-12 scroll-reveal" data-aos="fade-up">
           <Badge variant="default" className="badge-glow mb-4 sm:mb-6">
             <Target className="w-4 h-4 mr-2" />
             A CHI È RIVOLTO
@@ -73,7 +73,6 @@ const TargetSection: React.FC = () => {
             Prime AI è perfetto per chi vuole risultati concreti senza perdere tempo in teoria inutile
           </p>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center w-full">
           {/* Left Column - Target Profiles */}
           <div className="space-y-6 sm:space-y-8 w-full">
@@ -105,7 +104,6 @@ const TargetSection: React.FC = () => {
                 </div>
               </div>
             ))}
-
             {/* Call to Action */}
             <div 
               className="conversion-card bg-gradient-to-r from-primary/5 to-secondary/5 border-2 border-secondary/20 scroll-reveal w-full"
@@ -125,14 +123,13 @@ const TargetSection: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Right Column - Image */}
           <div className="relative scroll-reveal w-full" data-aos="fade-left">
             <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)] hover:scale-[1.02] transition-all duration-500">
               <img 
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                 alt="Professionisti diversificati che lavorano"
-                className="w-full h-auto object-cover max-w-full"
+                className="w-full h-auto object-contain max-w-full"
                 loading="lazy"
               />
             </div>
