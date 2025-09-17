@@ -23,7 +23,7 @@ const HeroKiller: React.FC = () => {
       interactive={false}
     >
       {/* PADDING BOTTOM ENORME: pb-40 sm:pb-48 lg:pb-56 */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-40 sm:pb-48 lg:pb-56">
+      <section className="relative min-h-screen flex items-center justify-center px-4 py-24">
         <div className="container mx-auto max-w-6xl w-full">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
             {/* Left */}
