@@ -55,26 +55,15 @@
 
 @layer base {
   * { 
-    @apply border-border; 
+    @apply border-border;
     box-sizing: border-box;
-    max-width: 100%;
   }
   
-  /* CRITICAL: Fix per le doppie scrollbar */
-  html {
-    height: 100%;
-    overflow-x: hidden;
-  }
-  
-  body { 
+  html, body { 
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
-    
-    /* CRITICAL: Altezza completa senza min-h-screen */
-    height: 100%;
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+    width: 100%;
     
     /* Multi-Layer Dark Gradient Background */
     background: 
@@ -89,9 +78,9 @@
       );
     
     background-color: hsl(var(--background));
+    min-height: 100vh;
   }
   
-  /* Responsive background adjustments */
   @media (max-width: 768px) {
     body {
       background: 
@@ -147,8 +136,6 @@
     box-shadow: var(--shadow-card);
     transition: all 0.3s ease;
     border-radius: 0.5rem !important;
-    max-width: 100%;
-    overflow: hidden;
   }
   .conversion-card:hover {
     @apply border-border;
@@ -171,15 +158,4 @@
       0 0 20px hsl(var(--primary) / 0.2),
       inset 0 1px 0 hsl(var(--primary) / 0.1);
   }
-}
-
-/* CRITICAL: Prevent double scrollbars */
-#root {
-  height: 100%;
-  overflow-x: hidden;
-}
-
-main {
-  /* MAI usare min-h-screen su main - causa doppie scrollbar */
-  overflow-x: hidden !important;
 }
