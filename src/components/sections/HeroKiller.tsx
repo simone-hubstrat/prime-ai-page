@@ -22,8 +22,8 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="w-full px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-20 sm:pb-28 lg:pb-36">
-        <div className="container mx-auto max-w-7xl w-full">
+      <section className="w-full px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-24 sm:pb-32 lg:pb-44">
+        <div className="container mx-auto max-w-screen-xl w-full">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
             {/* Left */}
             <div className="space-y-6 sm:space-y-8 lg:space-y-10 w-full order-2 lg:order-1" data-aos="fade-right">
@@ -54,8 +54,8 @@ const HeroKiller: React.FC = () => {
                 </div>
               </div>
               
-              {/* Pricing Card - CON EXTRA PADDING BOTTOM */}
-              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-6 sm:mt-8 mb-12 sm:mb-16 lg:mb-20" data-aos="zoom-in">
+              {/* Pricing Card - CON EXTRA PADDING BOTTOM MASSIMO */}
+              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-6 sm:mt-8 mb-16 sm:mb-24 lg:mb-32" data-aos="zoom-in">
                 <div className="flex items-baseline justify-center gap-3 mb-4">
                   <span className="text-sm sm:text-base text-muted-foreground line-through">€49,99</span>
                   <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-secondary">
