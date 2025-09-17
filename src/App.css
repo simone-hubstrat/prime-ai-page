@@ -1,9 +1,10 @@
+/* CORREZIONE CRITICA: Rimuovere max-width e padding che limitavano il layout */
 #root {
   max-width: none;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  text-align: left;
   width: 100%;
+  text-align: left;
   overflow-x: hidden;
 }
 
