@@ -80,7 +80,7 @@
     height: auto;
     border-radius: 0.5rem;
   }
-  #root, body, main {
+  #root, main {
     width: 100%;
     min-height: 100vh;
     margin: 0;
