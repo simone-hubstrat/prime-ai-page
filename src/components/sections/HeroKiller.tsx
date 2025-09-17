@@ -20,10 +20,10 @@ const HeroKiller: React.FC = () => {
       pointerColor="140, 100, 255"
       size="80%"
       blendingValue="hard-light"
-      interactive={false}
+      interactive={true}
     >
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
-        <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="container mx-auto max-w-6xl">
           {/* MOBILE: Flex Column Layout | DESKTOP: Grid Layout */}
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
             
