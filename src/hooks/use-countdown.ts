@@ -1,77 +1,106 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext, createContext, useCallback } from 'react';
 
 interface CountdownTime {
   hours: number;
   minutes: number;
   seconds: number;
   totalSeconds: number;
+  displayTime: string;
+  formatted: {
+    hours: string;
+    minutes: string;
+    seconds: string;
+  };
 }
 
-export const useCountdown = (initialHours: number = 47, initialMinutes: number = 23) => {
-  // Calculate initial total seconds
+interface CountdownContextType {
+  countdown: CountdownTime;
+  resetCountdown: () => void;
+}
+
+const CountdownContext = createContext<CountdownContextType | null>(null);
+
+export const CountdownProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // Countdown iniziale: 47 ore 23 minuti
+  const initialHours = 47;
+  const initialMinutes = 23;
   const initialTotalSeconds = (initialHours * 3600) + (initialMinutes * 60);
-  
-  const [timeLeft, setTimeLeft] = useState<CountdownTime>(() => {
-    const hours = Math.floor(initialTotalSeconds / 3600);
-    const minutes = Math.floor((initialTotalSeconds % 3600) / 60);
-    const seconds = initialTotalSeconds % 60;
-    
+
+  const [totalSeconds, setTotalSeconds] = useState(initialTotalSeconds);
+
+  // Funzione per calcolare il tempo formattato
+  const calculateTime = useCallback((seconds: number): CountdownTime => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+
+    const formatted = {
+      hours: hours.toString().padStart(2, '0'),
+      minutes: minutes.toString().padStart(2, '0'),
+      seconds: secs.toString().padStart(2, '0')
+    };
+
+    const displayTime = `${formatted.hours} ore ${formatted.minutes} minuti`;
+
     return {
       hours,
       minutes,
-      seconds,
-      totalSeconds: initialTotalSeconds
+      seconds: secs,
+      totalSeconds: seconds,
+      displayTime,
+      formatted
     };
-  });
+  }, []);
 
+  const [countdown, setCountdown] = useState<CountdownTime>(() => 
+    calculateTime(initialTotalSeconds)
+  );
+
+  // Reset countdown function
+  const resetCountdown = useCallback(() => {
+    setTotalSeconds(initialTotalSeconds);
+    setCountdown(calculateTime(initialTotalSeconds));
+  }, [initialTotalSeconds, calculateTime]);
+
+  // Main countdown effect
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        const newTotalSeconds = prev.totalSeconds - 1;
+      setTotalSeconds(prev => {
+        const newSeconds = prev - 1;
         
-        // If countdown reaches 0, restart from initial time
-        if (newTotalSeconds <= 0) {
-          const hours = Math.floor(initialTotalSeconds / 3600);
-          const minutes = Math.floor((initialTotalSeconds % 3600) / 60);
-          const seconds = initialTotalSeconds % 60;
-          
-          return {
-            hours,
-            minutes,
-            seconds,
-            totalSeconds: initialTotalSeconds
-          };
+        // Se arriva a zero, riavvia automaticamente
+        if (newSeconds <= 0) {
+          const resetSeconds = initialTotalSeconds;
+          setCountdown(calculateTime(resetSeconds));
+          return resetSeconds;
         }
         
-        const hours = Math.floor(newTotalSeconds / 3600);
-        const minutes = Math.floor((newTotalSeconds % 3600) / 60);
-        const seconds = newTotalSeconds % 60;
-        
-        return {
-          hours,
-          minutes,
-          seconds,
-          totalSeconds: newTotalSeconds
-        };
+        setCountdown(calculateTime(newSeconds));
+        return newSeconds;
       });
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [initialTotalSeconds]);
+  }, [initialTotalSeconds, calculateTime]);
 
-  const formatTime = (value: number): string => {
-    return value.toString().padStart(2, '0');
-  };
+  return (
+    <CountdownContext.Provider value={{ countdown, resetCountdown }}>
+      {children}
+    </CountdownContext.Provider>
+  );
+};
 
-  const formattedTime = {
-    hours: formatTime(timeLeft.hours),
-    minutes: formatTime(timeLeft.minutes),
-    seconds: formatTime(timeLeft.seconds)
-  };
+// Hook per usare il countdown
+export const useCountdown = () => {
+  const context = useContext(CountdownContext);
+  if (!context) {
+    throw new Error('useCountdown deve essere usato dentro CountdownProvider');
+  }
+  return context;
+};
 
-  return {
-    ...timeLeft,
-    formatted: formattedTime,
-    displayTime: `${formattedTime.hours} ore ${formattedTime.minutes} minuti`
-  };
+// Export legacy per compatibilità
+export const useLegacyCountdown = (initialHours: number = 47, initialMinutes: number = 23) => {
+  const { countdown } = useCountdown();
+  return countdown;
 };
