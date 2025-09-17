@@ -24,7 +24,7 @@ const HeroKiller: React.FC = () => {
     >
       <section className="w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-28 lg:pt-36 pb-20 sm:pb-32 lg:pb-40 min-h-screen">
         <div className="container mx-auto max-w-7xl w-full">
-          <div className="grid lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-start lg:items-center">
             {/* Left */}
             <div className="space-y-6 sm:space-y-8 lg:space-y-10 w-full" data-aos="fade-right">
               <Badge variant="limited" className="w-fit">
