@@ -56,7 +56,10 @@ const TargetSection: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 lg:py-20 xl:py-32 section-gradient w-full overflow-hidden">
+    <section 
+      ref={sectionRef} 
+      className="relative w-full py-12 sm:py-16 lg:py-20 xl:py-32 section-gradient overflow-hidden"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal" data-aos="fade-up">
