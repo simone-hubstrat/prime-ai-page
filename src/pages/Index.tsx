@@ -8,7 +8,7 @@ import SimpleFooter from '../components/sections/SimpleFooter';
 
 const Index: React.FC = () => {
   return (
-    <main className="w-full bg-background overflow-x-hidden">
+    <main className="landing-container w-full bg-background">
       <HeroKiller />
       <SocialProof />
       <StrategicPricing />
