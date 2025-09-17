@@ -80,6 +80,13 @@
     height: auto;
     border-radius: 0.5rem;
   }
+  #root, body, main {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
 }
 
 @layer components {
