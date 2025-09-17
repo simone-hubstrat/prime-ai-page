@@ -29,7 +29,7 @@ const SocialProof: React.FC = () => {
   
   return (
     <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 max-w-screen-xl">
+      <div className="container mx-auto px-4 max-w-6xl">
         {/* Social Proof Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
