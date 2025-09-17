@@ -1,10 +1,13 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: none;     /* ← Rimuovi il limite */
+  margin: 0;           /* ← Rimuovi margin */
+  padding: 0;          /* ← Rimuovi padding */
+  width: 100%;
+  text-align: left;    /* ← Cambia da center a left */
+  overflow-x: hidden;
 }
 
+/* Mantieni il resto uguale */
 .logo {
   height: 6em;
   padding: 1.5em;
