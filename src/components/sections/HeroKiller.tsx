@@ -7,7 +7,7 @@ import { BackgroundGradientAnimation } from '@/components/ui/background-gradient
 
 const HeroKiller: React.FC = () => {
   const countdown = useCountdown(47, 23);
-
+  
   return (
     <BackgroundGradientAnimation
       gradientBackgroundStart="rgb(10, 14, 26)"
@@ -22,12 +22,12 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-28 lg:pt-36 pb-20 sm:pb-32 lg:pb-40 min-h-screen">
-        <div className="container mx-auto max-w-7xl w-full overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-start lg:items-center">
+      <section className="hero-section w-full px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 lg:pt-20 pb-16 sm:pb-24 lg:pb-32 min-h-[100svh] flex items-center">
+        <div className="container mx-auto max-w-7xl w-full">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
             {/* Left */}
-            <div className="space-y-6 sm:space-y-8 lg:space-y-10 w-full" data-aos="fade-right">
-              <Badge variant="limited" className="w-fit">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8 w-full order-2 lg:order-1" data-aos="fade-right">
+              <Badge variant="default" className="w-fit badge-glow">
                 OFFERTA LIMITATA
               </Badge>
               <h1 className="hero-title">
@@ -50,7 +50,8 @@ const HeroKiller: React.FC = () => {
                   <div className="text-xs sm:text-sm text-muted-foreground break-words">Anche se non sei un programmatore</div>
                 </div>
               </div>
-              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-8 sm:mt-10 mb-6 sm:mb-8" data-aos="zoom-in">
+              
+              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-6 sm:mt-8" data-aos="zoom-in">
                 <div className="flex items-baseline justify-center gap-3 mb-4">
                   <span className="price-crossed">€49,99</span>
                   <div className="price-display">
@@ -70,8 +71,9 @@ const HeroKiller: React.FC = () => {
                 </div>
               </div>
             </div>
+            
             {/* Right - Hero Image */}
-            <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
+            <div className="relative w-full max-w-lg mx-auto lg:max-w-none order-1 lg:order-2">
               <img 
                 src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
                 alt="Persona che lavora al computer con AI"
