@@ -22,10 +22,10 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="flex flex-col justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20 relative z-10 w-full">
+      <section className="w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-36 pb-10 sm:pb-16 lg:pb-20">
         <div className="container mx-auto max-w-7xl w-full">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center w-full">
-            {/* Left - Ultra-Converting Copy */}
+            {/* Left */}
             <div className="space-y-4 sm:space-y-6 lg:space-y-8 w-full" data-aos="fade-right">
               <Badge variant="limited" className="w-fit">
                 OFFERTA LIMITATA
@@ -36,7 +36,6 @@ const HeroKiller: React.FC = () => {
               <p className="hero-subtitle">
                 Il corso Prime AI è pratico e completo per creare landing page efficaci in soli 10 mini lezioni, anche se parti da zero
               </p>
-              {/* Value Props */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full" data-aos="fade-up" data-aos-delay="200">
                 <div className="conversion-card text-center hover:scale-105 transition-transform duration-300 min-w-0">
                   <div className="text-xl sm:text-2xl font-bold text-secondary mb-1">€27,97</div>
@@ -52,7 +51,7 @@ const HeroKiller: React.FC = () => {
                 </div>
               </div>
               {/* Price + CTA */}
-              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0" data-aos="zoom-in" data-aos-delay="400">
+              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-6 sm:mt-10" data-aos="zoom-in" data-aos-delay="400">
                 <div className="flex items-baseline justify-center gap-3 sm:gap-4 mb-4">
                   <span className="price-crossed">€49,99</span>
                   <div className="price-display">
@@ -65,7 +64,6 @@ const HeroKiller: React.FC = () => {
                 <p className="text-xs sm:text-sm text-center text-muted-foreground mt-3">
                   Accesso immediato • Nessuna competenza tecnica richiesta
                 </p>
-                {/* Countdown */}
                 <div className="text-center mt-4 p-3 bg-secondary/10 rounded-lg border border-secondary/20 w-full">
                   <p className="text-secondary font-semibold text-xs sm:text-sm">
                     Offerta scade tra:<br className="sm:hidden" /> {countdown.displayTime}
