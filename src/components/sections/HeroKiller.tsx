@@ -2,12 +2,14 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
+import { BackgroundHero } from '@/components/ui/background-hero';
 import { useCountdown } from '@/hooks/use-countdown';
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
 
 const HeroKiller: React.FC = () => {
   const countdown = useCountdown(47, 23);
-  
+    <section className="min-h-screen flex items-center justify-center px-4 py-16 relative">
+      <BackgroundHero />
   return (
     <BackgroundGradientAnimation
       gradientBackgroundStart="rgb(10, 14, 26)"
@@ -86,7 +88,7 @@ const HeroKiller: React.FC = () => {
                 src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
                 alt="Persona che lavora al computer con AI"
                 className="w-full h-auto object-contain rounded-lg shadow-[var(--shadow-card)]"
-                loading="eager"
+              className="hero-image-blend w-full h-auto rounded-lg shadow-[var(--shadow-card)] relative z-10"
               />
             </div>
           </div>
@@ -97,3 +99,5 @@ const HeroKiller: React.FC = () => {
 };
 
 export default HeroKiller;
+
+}
