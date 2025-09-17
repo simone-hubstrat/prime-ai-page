@@ -9,23 +9,21 @@ const HeroKiller: React.FC = () => {
   const countdown = useCountdown(47, 23);
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      <BackgroundGradientAnimation
-        gradientBackgroundStart="rgb(10, 14, 26)"
-        gradientBackgroundEnd="rgb(20, 24, 36)"
-        firstColor="18, 113, 255"
-        secondColor="221, 74, 255"
-        thirdColor="100, 220, 255"
-        fourthColor="200, 50, 50"
-        fifthColor="180, 180, 50"
-        pointerColor="140, 100, 255"
-        size="80%"
-        blendingValue="hard-light"
-        interactive={false}
-      />
-      
-      <div className="relative z-10 w-full">
-        <div className="container mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+    <BackgroundGradientAnimation
+      gradientBackgroundStart="rgb(10, 14, 26)"
+      gradientBackgroundEnd="rgb(20, 24, 36)"
+      firstColor="18, 113, 255"
+      secondColor="221, 74, 255"
+      thirdColor="100, 220, 255"
+      fourthColor="200, 50, 50"
+      fifthColor="180, 180, 50"
+      pointerColor="140, 100, 255"
+      size="80%"
+      blendingValue="hard-light"
+      interactive={false}
+    >
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10 w-full overflow-hidden">
+        <div className="container mx-auto max-w-7xl w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
             {/* Left - Ultra-Converting Copy */}
             <div className="space-y-6 sm:space-y-8 w-full" data-aos="fade-right">
@@ -94,8 +92,8 @@ const HeroKiller: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </BackgroundGradientAnimation>
   );
 };
 
