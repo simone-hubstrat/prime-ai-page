@@ -1,6 +1,6 @@
-/* CRITICAL: Remove all width limitations and prevent overflow */
+/* CRITICAL: Root element setup per evitare doppie scrollbar */
 #root {
-  max-width: none;
+  height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -8,9 +8,9 @@
   overflow-x: hidden;
 }
 
-body {
+html, body {
+  height: 100%;
   overflow-x: hidden;
-  max-width: 100vw;
 }
 
 .logo {
