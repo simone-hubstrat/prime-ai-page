@@ -5,7 +5,7 @@ import StrategicPricing from '../components/sections/StrategicPricing';
 import TargetSection from '../components/sections/TargetSection';
 import FinalKiller from '../components/sections/FinalKiller';
 import SimpleFooter from '../components/sections/SimpleFooter';
-import { CountdownProvider } from '../hooks/use-countdown';
+import { CountdownProvider } from '../hooks/countdown-provider';
 
 const Index: React.FC = () => {
   // Smooth scrolling for anchor links
