@@ -3,9 +3,11 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh;
+  height: auto !important;
+  min-height: auto !important;
   text-align: left;
   overflow-x: hidden;
+  overflow-y: visible !important;
 }
 
 .logo {
