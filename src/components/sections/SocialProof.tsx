@@ -28,7 +28,7 @@ const SocialProof: React.FC = () => {
   ];
 
   return (
-    <section className="py-8 sm:py-16 lg:py-20 bg-muted/30 w-full">
+    <section className="py-10 sm:py-16 lg:py-20 bg-muted/30 w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         {/* Social Proof Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16" data-aos="fade-up">
