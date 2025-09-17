@@ -3,11 +3,9 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: auto !important;
-  min-height: auto !important;
+  height: 100vh;
   text-align: left;
-  overflow-x: hidden;
-  overflow-y: visible !important;
+  overflow: hidden; /* Importante: nasconde scroll su root */
 }
 
 .logo {
