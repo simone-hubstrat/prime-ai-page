@@ -20,15 +20,14 @@ const HeroKiller: React.FC = () => {
       pointerColor="140, 100, 255"
       size="80%"
       blendingValue="hard-light"
-      interactive={true}
+      interactive={false}
     >
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
-        <div className="container mx-auto max-w-6xl">
-          {/* MOBILE: Flex Column Layout | DESKTOP: Grid Layout */}
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
             
-            {/* 1. Badge + Title + Subtitle - SEMPRE PRIMO */}
-            <div className="order-1 lg:order-2 w-full space-y-6 sm:space-y-8" data-aos="fade-right">
+            {/* Left Content */}
+            <div className="order-1 lg:order-2 w-full space-y-6 sm:space-y-8">
               <Badge variant="default" className="w-fit bg-primary/20 text-primary border border-primary/30">
                 🚀 OFFERTA LIMITATA
               </Badge>
@@ -40,10 +39,7 @@ const HeroKiller: React.FC = () => {
               <p className="hero-subtitle">
                 Il corso Prime AI è pratico e completo per creare landing page efficaci in soli 10 mini lezioni, anche se parti da zero
               </p>
-            </div>
-
-            {/* 2. Value Props ("Zero codice") - SECONDO SU MOBILE */}
-            <div className="order-2 lg:order-2 w-full" data-aos="fade-up">
+              
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="conversion-card text-center">
                   <div className="text-2xl font-bold text-secondary mb-1">€27,97</div>
@@ -58,20 +54,8 @@ const HeroKiller: React.FC = () => {
                   <div className="text-sm text-muted-foreground">Anche per principianti</div>
                 </div>
               </div>
-            </div>
-
-            {/* 3. Hero Image - TERZO SU MOBILE (tra Zero codice e pricing) */}
-            <div className="order-3 lg:order-1 w-full max-w-lg mx-auto lg:max-w-none" data-aos="fade-left">
-              <img 
-                src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
-                alt="Persona che lavora al computer con AI"
-                className="w-full h-auto rounded-lg shadow-[var(--shadow-card)]"
-                loading="eager"
-              />
-            </div>
-
-            {/* 4. Pricing Card - QUARTO SU MOBILE (ultimo) */}
-            <div className="order-4 lg:order-2 w-full" data-aos="zoom-in">
+              
+              {/* Pricing Card */}
               <div className="conversion-card bg-muted/50 max-w-lg mx-auto lg:mx-0">
                 <div className="flex items-baseline gap-4 mb-4">
                   <span className="price-crossed">€49,99</span>
@@ -94,6 +78,16 @@ const HeroKiller: React.FC = () => {
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="order-2 lg:order-1 w-full max-w-lg mx-auto lg:max-w-none">
+              <img 
+                src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
+                alt="Persona che lavora al computer con AI"
+                className="w-full h-auto rounded-lg shadow-[var(--shadow-card)]"
+                loading="eager"
+              />
             </div>
 
           </div>
