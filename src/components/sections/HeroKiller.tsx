@@ -22,15 +22,14 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10 w-full overflow-hidden">
+      <section className="h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative w-full overflow-hidden">
         <div className="container mx-auto max-w-7xl w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
             {/* Left - Ultra-Converting Copy */}
             <div className="space-y-6 sm:space-y-8 w-full" data-aos="fade-right">
               <Badge variant="limited" className="w-fit">
-                🚀 OFFERTA LIMITATA
+                OFFERTA LIMITATA
               </Badge>
-              
               <h1 className="hero-title">
                 Questa landing page è stata creata con l'AI. Vuoi imparare a farlo anche tu?
               </h1>
@@ -75,7 +74,7 @@ const HeroKiller: React.FC = () => {
                 {/* Countdown */}
                 <div className="text-center mt-4 p-3 bg-secondary/10 rounded-lg border border-secondary/20 w-full">
                   <p className="text-secondary font-semibold text-xs sm:text-sm">
-                    ⏰ Offerta scade tra:<br className="sm:hidden" /> {countdown.displayTime}
+                    Offerta scade tra:<br className="sm:hidden" /> {countdown.displayTime}
                   </p>
                 </div>
               </div>
