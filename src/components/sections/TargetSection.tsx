@@ -56,8 +56,8 @@ const TargetSection: React.FC = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 lg:py-20 xl:py-32 section-gradient">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} className="py-12 sm:py-16 lg:py-20 xl:py-32 section-gradient w-full overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 scroll-reveal" data-aos="fade-up">
           <Badge variant="default" className="badge-glow mb-4 sm:mb-6">
@@ -74,26 +74,26 @@ const TargetSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center w-full">
           {/* Left Column - Target Profiles */}
-          <div className="space-y-6 sm:space-y-8">
+          <div className="space-y-6 sm:space-y-8 w-full">
             {targetProfiles.map((profile, index) => (
               <div 
                 key={index}
-                className="conversion-card hover:scale-[1.02] transition-all duration-300 scroll-reveal"
+                className="conversion-card hover:scale-[1.02] transition-all duration-300 scroll-reveal w-full"
                 data-aos="fade-right"
                 data-aos-delay={index * 200}
               >
-                <div className="flex items-start space-x-4 sm:space-x-6">
+                <div className="flex items-start space-x-4 sm:space-x-6 w-full">
                   <div className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 ${profile.bgColor} rounded-xl flex items-center justify-center transition-transform duration-300 hover:scale-110`}>
                     <profile.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${profile.color}`} />
                   </div>
                   
-                  <div className="space-y-2 sm:space-y-3 flex-1 min-w-0">
+                  <div className="space-y-2 sm:space-y-3 flex-1 min-w-0 w-full">
                     <h3 className="font-bold text-lg sm:text-xl text-foreground">
                       {profile.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed break-words">
                       {profile.description}
                     </p>
                     
@@ -108,7 +108,7 @@ const TargetSection: React.FC = () => {
 
             {/* Call to Action */}
             <div 
-              className="conversion-card bg-gradient-to-r from-primary/5 to-secondary/5 border-2 border-secondary/20 scroll-reveal"
+              className="conversion-card bg-gradient-to-r from-primary/5 to-secondary/5 border-2 border-secondary/20 scroll-reveal w-full"
               data-aos="zoom-in"
               data-aos-delay="600"
             >
@@ -127,12 +127,12 @@ const TargetSection: React.FC = () => {
           </div>
 
           {/* Right Column - Image */}
-          <div className="relative scroll-reveal" data-aos="fade-left">
+          <div className="relative scroll-reveal w-full" data-aos="fade-left">
             <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-card)] hover:scale-[1.02] transition-all duration-500">
               <img 
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                 alt="Professionisti diversificati che lavorano"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover max-w-full"
                 loading="lazy"
               />
             </div>

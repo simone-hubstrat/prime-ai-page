@@ -2,8 +2,8 @@ import React from 'react';
 
 const SimpleFooter: React.FC = () => {
   return (
-    <footer className="py-6 sm:py-8 border-t border-border bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <footer className="py-6 sm:py-8 border-t border-border bg-muted/30 w-full overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center w-full max-w-7xl">
         <div className="space-y-3 sm:space-y-4">
           <div className="text-xs sm:text-sm text-muted-foreground">
             <a 
@@ -16,11 +16,11 @@ const SimpleFooter: React.FC = () => {
             </a>
           </div>
           
-          <div className="text-xs text-muted-foreground">
+          <div className="text-xs text-muted-foreground break-words">
             Metodi di pagamento: PayPal, Carta di Credito/Debito, Bonifico
           </div>
           
-          <div className="text-xs text-muted-foreground">
+          <div className="text-xs text-muted-foreground break-words">
             © 2024 Prime AI Course - Tutti i diritti riservati | Privacy Policy
           </div>
         </div>

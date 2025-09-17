@@ -28,8 +28,8 @@ const SocialProof: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <section className="py-12 sm:py-16 lg:py-20 bg-muted/30 w-full overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         {/* Social Proof Header */}
         <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
           <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
@@ -44,9 +44,9 @@ const SocialProof: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left - Benefits */}
-          <div className="space-y-6 sm:space-y-8" data-aos="fade-right">
+          <div className="space-y-6 sm:space-y-8 w-full" data-aos="fade-right">
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
                 Perché questo corso funziona davvero?
@@ -66,21 +66,21 @@ const SocialProof: React.FC = () => {
             </div>
             
             {/* Urgency Element */}
-            <div className="conversion-card bg-secondary/10 border-secondary/20 hover:scale-[1.02] transition-transform duration-300" data-aos="zoom-in" data-aos-delay="400">
+            <div className="conversion-card bg-secondary/10 border-secondary/20 hover:scale-[1.02] transition-transform duration-300 w-full max-w-md" data-aos="zoom-in" data-aos-delay="400">
               <div className="flex items-center gap-2 mb-2">
                 <Clock className="w-5 h-5 text-secondary" />
                 <span className="text-sm sm:text-base font-bold text-foreground">Offerta scade tra:</span>
               </div>
-              <div className="text-xl sm:text-2xl font-bold text-secondary break-words">{countdown.displayTime}</div>
+              <div className="text-lg sm:text-xl font-bold text-secondary break-all">{countdown.displayTime}</div>
             </div>
           </div>
           
           {/* Right - Image + Testimonials */}
-          <div className="space-y-4 sm:space-y-6" data-aos="fade-left">
+          <div className="space-y-4 sm:space-y-6 w-full" data-aos="fade-left">
             <img 
               src="https://vg-bunny-cdn.b-cdn.net/public/or2mjx1q_.png"
               alt="Dashboard corso Prime AI"
-              className="w-full h-auto rounded-lg shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500"
+              className="w-full h-auto rounded-lg shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500 max-w-full"
               loading="lazy"
             />
             

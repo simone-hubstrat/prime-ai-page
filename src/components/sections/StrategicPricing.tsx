@@ -19,8 +19,8 @@ const StrategicPricing: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+    <section className="py-12 sm:py-16 lg:py-20 w-full overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl w-full">
         <div className="text-center mb-8 sm:mb-12" data-aos="fade-up">
           <Badge variant="limited" className="mb-4">
             ⚡ SOLO OGGI - PREZZO LANCIO
@@ -34,7 +34,7 @@ const StrategicPricing: React.FC = () => {
         </div>
         
         {/* Main Pricing Card */}
-        <div className="conversion-card max-w-lg mx-auto bg-gradient-to-br from-background to-muted/30 border-2 border-secondary/20 hover:scale-[1.02] transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
+        <div className="conversion-card max-w-lg mx-auto bg-gradient-to-br from-background to-muted/30 border-2 border-secondary/20 hover:scale-[1.02] transition-all duration-300 w-full" data-aos="zoom-in" data-aos-delay="200">
           <div className="text-center mb-4 sm:mb-6">
             <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2">
               <span className="price-crossed">€49,99</span>
@@ -81,7 +81,7 @@ const StrategicPricing: React.FC = () => {
         {/* Additional Urgency */}
         <div className="text-center mt-6 sm:mt-8" data-aos="fade-up" data-aos-delay="600">
           <p className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">
-            ⏰ Questa offerta scade tra {countdown.displayTime}
+            ⏰ Questa offerta scade tra<br className="sm:hidden" /> {countdown.displayTime}
           </p>
           <p className="text-xs text-muted-foreground">
             Dopo tornerà al prezzo pieno di €49,99
