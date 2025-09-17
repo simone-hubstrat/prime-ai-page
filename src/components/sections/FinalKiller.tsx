@@ -8,12 +8,11 @@ const FinalKiller: React.FC = () => {
   const countdown = useCountdown(47, 23);
 
   return (
-    <section className="relative w-full py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-secondary/5 to-primary/5 overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-secondary/5 to-primary/5 w-full overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center w-full">
         <Badge variant="limited" className="mb-6" data-aos="fade-down">
-          🔥 ULTIMA POSSIBILITÀ
+          ULTIMA POSSIBILITÀ
         </Badge>
-        
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6" data-aos="fade-up">
           Pronto a creare landing page efficaci in solo 10 lezioni?
         </h2>
@@ -52,8 +51,8 @@ const FinalKiller: React.FC = () => {
             </Button>
             
             <div className="text-xs sm:text-sm text-muted-foreground space-y-1">
-              <p>✅ Solo €27,97 • Accesso immediato • Nessuna competenza richiesta</p>
-              <p>✅ Disponibile per sempre • Garanzia 30 giorni • Supporto incluso</p>
+              <p> Solo €27,97 • Accesso immediato • Nessuna competenza richiesta</p>
+              <p> Disponibile per sempre • Garanzia 30 giorni • Supporto incluso</p>
             </div>
           </div>
         </div>
@@ -77,7 +76,7 @@ const FinalKiller: React.FC = () => {
         {/* Final Urgency */}
         <div className="mt-6 sm:mt-8 p-3 sm:p-4 bg-secondary/10 rounded-lg border border-secondary/20 hover:scale-[1.02] transition-transform duration-300" data-aos="pulse" data-aos-delay="800">
           <p className="text-sm sm:text-base text-secondary font-semibold">
-            ⏰ Questa offerta scade tra<br className="sm:hidden" /> {countdown.displayTime}
+            Questa offerta scade tra<br className="sm:hidden" /> {countdown.displayTime}
           </p>
           <p className="text-xs sm:text-sm text-muted-foreground mt-1">
             Dopo tornerà al prezzo pieno di €49,99. Non aspettare.
