@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @layer base {
@@ -12,13 +11,11 @@
     --background-mid: 230 35% 17%;      /* #1a1f35 - Mid blue-gray */
     --background-end: 254 27% 18%;      /* #2d1b3d - Purple-blue end */
     --foreground: 0 0% 100%;            /* #FFFFFF - Pure white text */
-    
     /* Brand Colors */
     --primary: 225 100% 67%;            /* #436BFF - Badge blue */
     --primary-foreground: 0 0% 100%;
     --secondary: 163 89% 58%;           /* #2FE6B8 - CTA green */
     --secondary-foreground: 0 0% 100%;
-    
     /* System Colors - Dark Theme Optimized */
     --card: 225 52% 13%;                /* Mid-tone for cards */
     --card-foreground: 0 0% 100%;
@@ -33,15 +30,12 @@
     --destructive-foreground: 0 0% 100%;
     --popover: 225 52% 13%;
     --popover-foreground: 0 0% 100%;
-    
     /* Enhanced Shadows with Glow Effects */
     --shadow-cta: 0 8px 32px 0 hsl(163 89% 58% / 0.4), 0 0 0 1px hsl(163 89% 58% / 0.1);
     --shadow-card: 0 4px 20px 0 hsl(225 62% 7% / 0.6), 0 0 0 1px hsl(225 27% 25% / 0.3);
     --shadow-glow-cyan: 0 0 80px hsl(195 100% 75% / 0.15);
     --shadow-glow-green: 0 0 60px hsl(163 89% 58% / 0.1);
-    
     --radius: 0.75rem;
-    
     /* Sidebar (keeping for consistency) */
     --sidebar-background: 225 52% 13%;
     --sidebar-foreground: 0 0% 100%;
@@ -62,31 +56,26 @@
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
-    
     /* Simple Clean Gradient Background */
     background: linear-gradient(135deg, 
       hsl(var(--background)) 0%, 
       hsl(var(--background-mid)) 50%,
       hsl(var(--background-end)) 100%
     );
-    
     /* Fallback for older browsers */
     background-color: hsl(var(--background));
-    
     /* Ensure full height coverage */
     min-height: 100vh;
   }
-
   /* Prevent any element from causing horizontal overflow */
   * {
     max-width: 100%;
     box-sizing: border-box;
   }
-
   /* Hero Image Integration */
   .hero-image-natural {
-    object-fit: cover;
-    object-position: center right;
+    object-fit: contain;
+    object-position: center;
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
@@ -109,7 +98,6 @@
   .price-crossed { 
     @apply text-base sm:text-lg text-muted-foreground line-through; 
   }
-
   /* Enhanced CTA System with Glow */
   .cta-killer { 
     @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300;
@@ -126,7 +114,6 @@
   .cta-killer:active {
     @apply scale-[0.98];
   }
-
   /* Enhanced Card System */
   .conversion-card { 
     @apply bg-card/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-border/50;
@@ -140,14 +127,12 @@
       0 0 0 1px hsl(225 27% 25% / 0.5);
     transform: translateY(-2px);
   }
-
   /* Section Backgrounds */
   .section-gradient {
     background: 
       radial-gradient(ellipse 600px 300px at 50% 0%, hsl(225 35% 20% / 0.1) 0%, transparent 70%),
       transparent;
   }
-
   /* Badge Glow */
   .badge-glow {
     @apply bg-primary/20 text-primary border border-primary/30;
@@ -155,7 +140,6 @@
       0 0 20px hsl(var(--primary) / 0.2),
       inset 0 1px 0 hsl(var(--primary) / 0.1);
   }
-
   /* AOS Custom Animations */
   .scroll-reveal {
     opacity: 0;
@@ -166,7 +150,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-
   /* Enhanced Hover Effects */
   .hover-lift {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
