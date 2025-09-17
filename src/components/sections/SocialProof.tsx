@@ -3,7 +3,7 @@ import { CheckCircle, Star, Users, Clock } from 'lucide-react';
 import { useCountdown } from '@/hooks/use-countdown';
 
 const SocialProof: React.FC = () => {
-  const countdown = useCountdown(47, 23);
+  const { countdown } = useCountdown();
   
   const benefits = [
     "Crea landing page professionali in minuti, non giorni",
