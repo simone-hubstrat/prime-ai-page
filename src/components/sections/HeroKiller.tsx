@@ -6,7 +6,7 @@ import { useCountdown } from '@/hooks/use-countdown';
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
 
 const HeroKiller: React.FC = () => {
-  const countdown = useCountdown(47, 23);
+  const { countdown } = useCountdown();
   
   return (
     <BackgroundGradientAnimation
@@ -90,7 +90,7 @@ const HeroKiller: React.FC = () => {
                 
                 <div className="text-center p-3 bg-secondary/10 rounded-lg border border-secondary/20">
                   <p className="text-secondary font-semibold text-sm">
-                    Offerta scade tra: {countdown.displayTime}
+                    Offerta scade tra: <span className="font-bold">{countdown.displayTime}</span>
                   </p>
                 </div>
               </div>
