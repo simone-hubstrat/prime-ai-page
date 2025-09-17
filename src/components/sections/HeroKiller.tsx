@@ -22,7 +22,7 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="w-full px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-28 sm:pb-36 lg:pb-52">
+      <section className="w-full px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-28 sm:pb-36 lg:pb-72">
         <div className="container mx-auto max-w-screen-xl w-full">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
             {/* Left */}
