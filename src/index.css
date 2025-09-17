@@ -40,6 +40,7 @@
     --shadow-glow-cyan: 0 0 80px hsl(195 100% 75% / 0.15);
     --shadow-glow-green: 0 0 60px hsl(163 89% 58% / 0.1);
     
+    /* CORREZIONE CRITICA: Definire --radius per border-radius */
     --radius: 0.75rem;
     
     /* Sidebar (keeping for consistency) */
@@ -55,16 +56,12 @@
 }
 
 @layer base {
-  * { 
-    @apply border-border;
-    box-sizing: border-box;
-  }
-  
+  * { @apply border-border; }
   body { 
     font-family: 'Inter', system-ui, sans-serif;
     @apply text-foreground;
     
-    /* Multi-Layer Dark Gradient Background */
+    /* Multi-Layer Dark Gradient Background - Come Originale */
     background: 
       /* Subtle vignette overlay */
       radial-gradient(circle at 50% 50%, transparent 40%, hsl(225 62% 7% / 0.4) 100%),
@@ -110,16 +107,13 @@
     @apply text-4xl md:text-6xl font-extrabold text-foreground leading-tight;
     text-shadow: 0 0 40px hsl(var(--foreground) / 0.1);
   }
-  
   .hero-subtitle { 
     @apply text-lg md:text-xl text-muted-foreground leading-relaxed; 
   }
-  
   .price-display { 
     @apply text-5xl md:text-7xl font-black text-secondary;
     filter: drop-shadow(var(--shadow-glow-green));
   }
-  
   .price-crossed { 
     @apply text-lg text-muted-foreground line-through; 
   }
@@ -130,7 +124,6 @@
     box-shadow: var(--shadow-cta);
     transform-origin: center;
   }
-  
   .cta-killer:hover {
     @apply scale-[1.02];
     box-shadow: 
@@ -138,19 +131,18 @@
       0 0 0 1px hsl(163 89% 58% / 0.2),
       var(--shadow-glow-green);
   }
-  
   .cta-killer:active {
     @apply scale-[0.98];
   }
   
-  /* Enhanced Card System */
+  /* Enhanced Card System - CORREZIONE BORDER RADIUS */
   .conversion-card { 
     @apply bg-card/80 backdrop-blur-sm p-6 rounded-lg border border-border/50;
     box-shadow: var(--shadow-card);
     transition: all 0.3s ease;
+    /* Forza border-radius in caso di problemi con CSS variables */
     border-radius: 0.5rem !important;
   }
-  
   .conversion-card:hover {
     @apply border-border;
     box-shadow: 
@@ -172,13 +164,4 @@
       0 0 20px hsl(var(--primary) / 0.2),
       inset 0 1px 0 hsl(var(--primary) / 0.1);
   }
-}
-
-/* GARANTISCE SEMPRE BORDER RADIUS */
-.rounded-lg {
-  border-radius: 0.5rem !important;
-}
-
-.rounded-full {
-  border-radius: 9999px !important;
 }
