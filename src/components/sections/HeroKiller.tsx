@@ -50,7 +50,7 @@ const HeroKiller: React.FC = () => {
                   <div className="text-xs sm:text-sm text-muted-foreground break-words">Anche se non sei un programmatore</div>
                 </div>
               </div>
-              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-10" data-aos="zoom-in">
+              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-8 sm:mt-10 mb-6 sm:mb-8" data-aos="zoom-in">
                 <div className="flex items-baseline justify-center gap-3 mb-4">
                   <span className="price-crossed">€49,99</span>
                   <div className="price-display">
