@@ -22,8 +22,9 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="w-full px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-28 sm:pb-36 lg:pb-72">
-        <div className="container mx-auto max-w-screen-xl w-full">
+      {/* PADDING BOTTOM ENORME: pb-40 sm:pb-48 lg:pb-56 */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-40 sm:pb-48 lg:pb-56">
+        <div className="container mx-auto max-w-6xl w-full">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
             {/* Left */}
             <div className="space-y-6 sm:space-y-8 lg:space-y-10 w-full order-2 lg:order-1" data-aos="fade-right">
@@ -54,8 +55,8 @@ const HeroKiller: React.FC = () => {
                 </div>
               </div>
               
-              {/* Pricing Card - CON EXTRA PADDING BOTTOM MASSIMO */}
-              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-6 sm:mt-8 mb-16 sm:mb-24 lg:mb-32" data-aos="zoom-in">
+              {/* Pricing Card - CON MARGIN BOTTOM GIGANTESCO */}
+              <div className="conversion-card bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-6 sm:mt-8 mb-24 sm:mb-32 lg:mb-40" data-aos="zoom-in">
                 <div className="flex items-baseline justify-center gap-3 mb-4">
                   <span className="text-sm sm:text-base text-muted-foreground line-through">€49,99</span>
                   <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-secondary">
@@ -84,7 +85,7 @@ const HeroKiller: React.FC = () => {
             <div className="relative w-full max-w-lg mx-auto lg:max-w-none order-1 lg:order-2 mb-8 lg:mb-0">
               <img 
                 src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
-                alt="Persona che fa segno ok"
+                alt="Persona che lavora al computer con AI"
                 className="w-full h-auto object-contain rounded-lg shadow-[var(--shadow-card)]"
                 loading="eager"
               />
