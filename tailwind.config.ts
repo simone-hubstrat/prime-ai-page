@@ -12,7 +12,8 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      // RIMUOVI IL PADDING - CAUSA DEL PROBLEMA
+      // padding: '2rem', ← QUESTA RIGA ELIMINATA
       screens: {
         '2xl': '1400px'
       }
