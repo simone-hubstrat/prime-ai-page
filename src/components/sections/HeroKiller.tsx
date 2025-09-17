@@ -73,7 +73,7 @@ const HeroKiller: React.FC = () => {
                 
                 <div className="text-center p-3 bg-secondary/10 rounded-lg border border-secondary/20 w-full">
                   <p className="text-secondary font-semibold text-xs sm:text-sm leading-relaxed">
-                    Offerta scade tra:<br className="sm:shown" />
+                    Offerta scade tra:<br className="sm:hidden" />
                     <span className="block sm:inline sm:ml-1 font-bold">{countdown.displayTime}</span>
                   </p>
                 </div>
@@ -84,7 +84,7 @@ const HeroKiller: React.FC = () => {
             <div className="relative w-full max-w-lg mx-auto lg:max-w-none order-1 lg:order-2 mb-8 lg:mb-0">
               <img 
                 src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
-                alt="Persona che lavora al computer con AI"
+                alt="Persona che fa segno ok"
                 className="w-full h-auto object-contain rounded-lg shadow-[var(--shadow-card)]"
                 loading="eager"
               />
