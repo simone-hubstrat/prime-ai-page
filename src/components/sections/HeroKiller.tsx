@@ -22,75 +22,79 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="hero-section-fixed w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="container mx-auto max-w-7xl w-full">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
-            {/* Left */}
-            <div className="space-y-6 sm:space-y-8 lg:space-y-10 w-full order-2 lg:order-1" data-aos="fade-right">
-              <Badge variant="default" className="w-fit badge-glow">
-                OFFERTA LIMITATA
-              </Badge>
-              
-              <h1 className="hero-title-responsive">
-                Questa landing page è stata creata con l'AI. Vuoi imparare a farlo anche tu?
-              </h1>
-              
-              <p className="hero-subtitle-responsive">
-                Il corso Prime AI è pratico e completo per creare landing page efficaci in soli 10 mini lezioni, anche se parti da zero
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full">
-                <div className="conversion-card-compact text-center">
-                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-secondary mb-1">€27,97</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground break-words">Investimento minimo, valore massimo</div>
-                </div>
-                <div className="conversion-card-compact text-center">
-                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary mb-1">10 mini lezioni</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground break-words">Dalla teoria alla tua prima landing</div>
-                </div>
-                <div className="conversion-card-compact text-center sm:col-span-3 lg:col-span-1">
-                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-1">Zero codice</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground break-words">Anche se non sei un programmatore</div>
-                </div>
-              </div>
-              
-              {/* Pricing Card - Sempre Visibile */}
-              <div className="conversion-card-main bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-6 sm:mt-8 mb-8 sm:mb-12" data-aos="zoom-in">
-                <div className="flex items-baseline justify-center gap-3 mb-4">
-                  <span className="price-crossed-responsive">€49,99</span>
-                  <div className="price-display-responsive">
-                    €<AnimatedCounter from={49} to={27} duration={1500} />,97
+      {/* Container scrollabile che contiene tutto */}
+      <div className="hero-container-scrollable">
+        <section className="hero-section-natural w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+          <div className="container mx-auto max-w-7xl w-full">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
+              {/* Left */}
+              <div className="space-y-6 sm:space-y-8 lg:space-y-10 w-full order-2 lg:order-1" data-aos="fade-right">
+                <Badge variant="default" className="w-fit badge-glow">
+                  OFFERTA LIMITATA
+                </Badge>
+                
+                <h1 className="hero-title-natural">
+                  Questa landing page è stata creata con l'AI. Vuoi imparare a farlo anche tu?
+                </h1>
+                
+                <p className="hero-subtitle-natural">
+                  Il corso Prime AI è pratico e completo per creare landing page efficaci in soli 10 mini lezioni, anche se parti da zero
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full">
+                  <div className="conversion-card-natural text-center">
+                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-secondary mb-1">€27,97</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground break-words">Investimento minimo, valore massimo</div>
+                  </div>
+                  <div className="conversion-card-natural text-center">
+                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-primary mb-1">10 mini lezioni</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground break-words">Dalla teoria alla tua prima landing</div>
+                  </div>
+                  <div className="conversion-card-natural text-center sm:col-span-3 lg:col-span-1">
+                    <div className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-1">Zero codice</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground break-words">Anche se non sei un programmatore</div>
                   </div>
                 </div>
                 
-                <Button variant="secondary" size="lg" className="w-full hover:scale-[1.02] transition-all duration-300 mb-3">
-                  Inizia ora - Accedi al corso
-                </Button>
-                
-                <p className="text-xs sm:text-sm text-center text-muted-foreground mb-4">
-                  Accesso immediato • Nessuna competenza tecnica richiesta
-                </p>
-                
-                <div className="text-center p-3 bg-secondary/10 rounded-lg border border-secondary/20 w-full">
-                  <p className="text-secondary font-semibold text-xs sm:text-sm">
-                    Offerta scade tra:<br className="sm:hidden" /> {countdown.displayTime}
+                {/* Pricing Card - SEMPRE COMPLETAMENTE VISIBILE */}
+                <div className="conversion-card-pricing bg-card/80 backdrop-blur-sm w-full max-w-lg mx-auto lg:mx-0 mt-6 sm:mt-8 mb-8 sm:mb-12" data-aos="zoom-in">
+                  <div className="flex items-baseline justify-center gap-3 mb-4">
+                    <span className="price-crossed-natural">€49,99</span>
+                    <div className="price-display-natural">
+                      €<AnimatedCounter from={49} to={27} duration={1500} />,97
+                    </div>
+                  </div>
+                  
+                  <Button variant="secondary" size="lg" className="w-full hover:scale-[1.02] transition-all duration-300 mb-4">
+                    Inizia ora - Accedi al corso
+                  </Button>
+                  
+                  <p className="text-xs sm:text-sm text-center text-muted-foreground mb-4">
+                    Accesso immediato • Nessuna competenza tecnica richiesta
                   </p>
+                  
+                  <div className="text-center p-3 bg-secondary/10 rounded-lg border border-secondary/20 w-full">
+                    <p className="text-secondary font-semibold text-xs sm:text-sm leading-relaxed">
+                      Offerta scade tra:<br className="sm:hidden" />
+                      <span className="block sm:inline sm:ml-1">{countdown.displayTime}</span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Right - Hero Image */}
-            <div className="relative w-full max-w-lg mx-auto lg:max-w-none order-1 lg:order-2 mb-6 lg:mb-0">
-              <img 
-                src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
-                alt="Persona che lavora al computer con AI"
-                className="w-full h-auto object-contain rounded-lg shadow-[var(--shadow-card)]"
-                loading="eager"
-              />
+              
+              {/* Right - Hero Image */}
+              <div className="relative w-full max-w-lg mx-auto lg:max-w-none order-1 lg:order-2 mb-6 lg:mb-0">
+                <img 
+                  src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
+                  alt="Persona che lavora al computer con AI"
+                  className="w-full h-auto object-contain rounded-lg shadow-[var(--shadow-card)]"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </BackgroundGradientAnimation>
   );
 };
