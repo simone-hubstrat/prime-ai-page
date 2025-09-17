@@ -28,7 +28,7 @@ const SocialProof: React.FC = () => {
   ];
   
   return (
-    <section className="section-spacing bg-muted/30 w-full">
+    <section className="pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24 bg-muted/30 w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         <div className="text-center mb-12 lg:mb-16" data-aos="fade-up">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -63,12 +63,12 @@ const SocialProof: React.FC = () => {
               ))}
             </div>
             
-            <div className="conversion-card-compact bg-secondary/10 border-secondary/20 w-full max-w-md">
+            <div className="bg-card/80 backdrop-blur-sm p-4 sm:p-5 rounded-lg border border-secondary/20 w-full max-w-md bg-secondary/10">
               <div className="flex items-center gap-2 mb-2">
                 <Clock className="w-5 h-5 text-secondary" />
                 <span className="text-sm sm:text-base font-bold text-foreground">Offerta scade tra:</span>
               </div>
-              <div className="text-lg sm:text-xl font-bold text-secondary break-all">{countdown.displayTime}</div>
+              <div className="text-lg sm:text-xl font-bold text-secondary">{countdown.displayTime}</div>
             </div>
           </div>
           
@@ -82,13 +82,13 @@ const SocialProof: React.FC = () => {
             
             <div className="space-y-4">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="conversion-card-compact" data-aos="fade-up">
-                  <div className="flex items-center gap-1 mb-2">
+                <div key={index} className="bg-card/80 backdrop-blur-sm p-4 sm:p-5 rounded-lg border border-border/50 shadow-[0_4px_20px_0_hsl(225_62%_7%_/_0.6),_0_0_0_1px_hsl(225_27%_25%_/_0.3)] transition-all duration-300 hover:transform hover:-translate-y-1" data-aos="fade-up">
+                  <div className="flex items-center gap-1 mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-secondary text-secondary" />
                     ))}
                   </div>
-                  <p className="text-sm sm:text-base text-foreground mb-3">"{testimonial.text}"</p>
+                  <p className="text-sm sm:text-base text-foreground mb-3 leading-relaxed">"{testimonial.text}"</p>
                   <div className="text-sm text-muted-foreground">
                     <span className="font-semibold">{testimonial.name}</span> - {testimonial.role}
                   </div>
