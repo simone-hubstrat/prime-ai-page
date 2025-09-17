@@ -6,19 +6,17 @@
 
 @layer base {
   :root {
-    /* Simple Clean Gradient Design System */
+    /* Design System Colors */
     --background: 230 46% 8%;           
     --background-mid: 230 35% 17%;      
     --background-end: 254 27% 18%;      
     --foreground: 0 0% 100%;            
     
-    /* Brand Colors */
     --primary: 225 100% 67%;            
     --primary-foreground: 0 0% 100%;
     --secondary: 163 89% 58%;           
     --secondary-foreground: 0 0% 100%;
     
-    /* System Colors */
     --card: 225 52% 13%;                
     --card-foreground: 0 0% 100%;
     --border: 225 27% 25%;              
@@ -33,14 +31,12 @@
     --popover: 225 52% 13%;
     --popover-foreground: 0 0% 100%;
     
-    /* Enhanced Shadows */
     --shadow-cta: 0 8px 32px 0 hsl(163 89% 58% / 0.4), 0 0 0 1px hsl(163 89% 58% / 0.1);
     --shadow-card: 0 4px 20px 0 hsl(225 62% 7% / 0.6), 0 0 0 1px hsl(225 27% 25% / 0.3);
     --shadow-glow-cyan: 0 0 80px hsl(195 100% 75% / 0.15);
     --shadow-glow-green: 0 0 60px hsl(163 89% 58% / 0.1);
     --radius: 0.75rem;
     
-    /* Sidebar */
     --sidebar-background: 225 52% 13%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 225 62% 7%;
@@ -73,109 +69,115 @@
     );
     background-color: hsl(var(--background));
     
-    /* RIMUOVI min-height per evitare problemi */
+    /* CRITICAL: Allow natural height */
     height: auto;
+    min-height: 100vh;
   }
   
-  /* Prevent overflow issues */
   * {
     max-width: 100%;
   }
 }
 
 @layer components {
-  /* HERO SECTION - ANTI-TRUNCATE */
-  .hero-section-fixed {
-    /* NON usare min-h-screen - causa problemi */
+  /* PAGE CONTAINER - Scrollabile */
+  .page-container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+  }
+  
+  /* HERO CONTAINER - Scrollabile quando necessario */
+  .hero-container-scrollable {
+    width: 100%;
+    /* Permette al contenuto di essere più alto del viewport */
+    min-height: 100vh;
+    /* Ma senza forzare altezza fissa */
+    height: auto;
+    /* Scroll interno se necessario */
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  /* HERO SECTION - Altezza Naturale */
+  .hero-section-natural {
+    /* NESSUNA altezza fissa o minima */
     height: auto !important;
     min-height: auto !important;
     
-    /* Padding generoso per garantire visibilità */
+    /* Padding generoso per spaziatura */
     padding-top: 3rem;
     padding-bottom: 4rem;
   }
   
   @media (min-width: 640px) {
-    .hero-section-fixed {
+    .hero-section-natural {
       padding-top: 4rem;
       padding-bottom: 5rem;
     }
   }
   
   @media (min-width: 1024px) {
-    .hero-section-fixed {
+    .hero-section-natural {
       padding-top: 5rem;
       padding-bottom: 6rem;
     }
   }
   
-  /* SECTION SPACING - Consistente */
-  .section-spacing {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-  
-  @media (min-width: 640px) {
-    .section-spacing {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .section-spacing {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
-    }
-  }
-  
-  /* LANDING CONTAINER - Mai truncare */
-  .landing-container {
-    overflow-x: hidden;
-    overflow-y: visible !important;
-    min-height: auto !important;
-    height: auto !important;
-  }
-  
-  /* TYPOGRAPHY - Responsive e Sicura */
-  .hero-title-responsive { 
+  /* TYPOGRAPHY - Dimensioni Appropriate */
+  .hero-title-natural { 
     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight;
     text-shadow: 0 0 40px hsl(var(--foreground) / 0.1);
+    margin-bottom: 1rem;
   }
   
-  .hero-subtitle-responsive { 
-    @apply text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed; 
+  .hero-subtitle-natural { 
+    @apply text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed;
+    margin-bottom: 1.5rem;
   }
   
-  .price-display-responsive { 
+  .price-display-natural { 
     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-secondary;
     filter: drop-shadow(var(--shadow-glow-green));
   }
   
-  .price-crossed-responsive { 
+  .price-crossed-natural { 
     @apply text-sm sm:text-base text-muted-foreground line-through; 
   }
   
-  /* CARDS - Compatte ma Visibili */
-  .conversion-card-compact { 
+  /* CARDS - Dimensioni Ottimizzate */
+  .conversion-card-natural { 
     @apply bg-card/80 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-border/50;
     box-shadow: var(--shadow-card);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .conversion-card-main { 
-    @apply bg-card/80 backdrop-blur-sm p-4 sm:p-6 rounded-lg border border-border/50;
+  .conversion-card-pricing { 
+    @apply bg-card/80 backdrop-blur-sm p-4 sm:p-5 lg:p-6 rounded-lg border border-border/50;
     box-shadow: var(--shadow-card);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Margine bottom per garantire che sia sempre visibile */
+    margin-bottom: 2rem !important;
   }
   
-  .conversion-card-compact:hover,
-  .conversion-card-main:hover {
+  .conversion-card-natural:hover,
+  .conversion-card-pricing:hover {
     @apply border-border;
     box-shadow: 
       0 8px 32px 0 hsl(225 62% 7% / 0.8),
       0 0 0 1px hsl(225 27% 25% / 0.5);
     transform: translateY(-2px);
+  }
+  
+  /* BADGE GLOW */
+  .badge-glow {
+    @apply bg-primary/20 text-primary border border-primary/30;
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.2),
+      inset 0 1px 0 hsl(var(--primary) / 0.1);
   }
   
   /* CTA SYSTEM */
@@ -196,69 +198,73 @@
   .cta-killer:active {
     @apply scale-[0.98];
   }
-  
-  /* BADGE GLOW */
-  .badge-glow {
-    @apply bg-primary/20 text-primary border border-primary/30;
-    box-shadow: 
-      0 0 20px hsl(var(--primary) / 0.2),
-      inset 0 1px 0 hsl(var(--primary) / 0.1);
-  }
-  
-  /* HOVER EFFECTS */
-  .hover-lift {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .hover-lift:hover {
-    transform: translateY(-4px);
-  }
 }
 
-/* CRITICAL: Anti-Truncate per Tutte le Altezze */
-@media (max-height: 900px) {
-  .hero-section-fixed {
+/* RESPONSIVE ADJUSTMENTS - Riduzione padding solo se necessario */
+@media (max-height: 700px) {
+  .hero-section-natural {
     padding-top: 2rem !important;
     padding-bottom: 3rem !important;
   }
-}
-
-@media (max-height: 700px) {
-  .hero-section-fixed {
-    padding-top: 1.5rem !important;
-    padding-bottom: 2.5rem !important;
-  }
   
-  .hero-title-responsive {
-    @apply text-xl sm:text-2xl md:text-3xl !important;
-  }
-  
-  .price-display-responsive {
-    @apply text-xl sm:text-2xl md:text-3xl !important;
+  .conversion-card-pricing {
+    margin-bottom: 1.5rem !important;
   }
 }
 
 @media (max-height: 600px) {
-  .hero-section-fixed {
-    padding-top: 1rem !important;
-    padding-bottom: 2rem !important;
+  .hero-section-natural {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2.5rem !important;
   }
   
-  .conversion-card-main,
-  .conversion-card-compact {
-    @apply p-2 sm:p-3 !important;
+  .hero-title-natural {
+    @apply text-xl sm:text-2xl md:text-3xl !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .hero-subtitle-natural {
+    margin-bottom: 1rem !important;
+  }
+  
+  .conversion-card-pricing {
+    @apply p-3 sm:p-4 !important;
+    margin-bottom: 1rem !important;
   }
 }
 
 /* Mobile Landscape - Ultra Compatto */
 @media (max-height: 500px) and (orientation: landscape) {
-  .hero-section-fixed {
-    padding: 0.5rem 0 1.5rem 0 !important;
+  .hero-section-natural {
+    padding-top: 1rem !important;
+    padding-bottom: 2rem !important;
   }
   
   .space-y-6 > * + *,
   .space-y-8 > * + *,
   .space-y-10 > * + * {
-    margin-top: 0.75rem !important;
+    margin-top: 0.5rem !important;
   }
+  
+  .conversion-card-pricing {
+    margin-bottom: 0.75rem !important;
+  }
+}
+
+/* SCROLLBAR STYLING per un'esperienza migliore */
+.page-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.page-container::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+.page-container::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+.page-container::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
 }
