@@ -8,14 +8,16 @@ import SimpleFooter from '../components/sections/SimpleFooter';
 
 const Index: React.FC = () => {
   return (
-    <main className="landing-container w-full bg-background">
-      <HeroKiller />
-      <SocialProof />
-      <StrategicPricing />
-      <TargetSection />
-      <FinalKiller />
-      <SimpleFooter />
-    </main>
+    <div className="page-container">
+      <main className="w-full bg-background">
+        <HeroKiller />
+        <SocialProof />
+        <StrategicPricing />
+        <TargetSection />
+        <FinalKiller />
+        <SimpleFooter />
+      </main>
+    </div>
   );
 };
 
