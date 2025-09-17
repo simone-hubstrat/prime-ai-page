@@ -1,15 +1,9 @@
-/* CRITICAL: Root element setup per evitare doppie scrollbar */
 #root {
-  height: 100%;
+  max-width: none;
   margin: 0;
   padding: 0;
   width: 100%;
   text-align: left;
-  overflow-x: hidden;
-}
-
-html, body {
-  height: 100%;
   overflow-x: hidden;
 }
 
