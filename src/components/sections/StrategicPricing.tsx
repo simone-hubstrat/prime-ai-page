@@ -7,7 +7,6 @@ import { useCountdown } from '@/hooks/use-countdown';
 
 const StrategicPricing: React.FC = () => {
   const countdown = useCountdown(47, 23);
-
   const features = [
     "10 video lezioni step-by-step (2 ore totali)",
     "Template pronti per ogni settore",
@@ -19,7 +18,7 @@ const StrategicPricing: React.FC = () => {
   ];
 
   return (
-    <section className="relative w-full py-12 sm:py-16 lg:py-20 overflow-hidden">
+    <section className="relative w-full py-8 sm:py-12 lg:py-16 overflow-visible">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl w-full">
         <div className="text-center mb-8 sm:mb-12" data-aos="fade-up">
           <Badge variant="limited" className="mb-4">
