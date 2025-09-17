@@ -1,4 +1,4 @@
-/* CORREZIONE CRITICA: Rimuovere max-width e padding che limitavano il layout */
+/* CRITICAL: Remove all width limitations and prevent overflow */
 #root {
   max-width: none;
   margin: 0;
@@ -6,6 +6,11 @@
   width: 100%;
   text-align: left;
   overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .logo {
