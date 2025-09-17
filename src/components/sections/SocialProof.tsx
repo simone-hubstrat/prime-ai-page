@@ -28,10 +28,10 @@ const SocialProof: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-muted/30 w-full overflow-hidden">
+    <section className="py-8 sm:py-16 lg:py-20 bg-muted/30 w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
         {/* Social Proof Header */}
-        <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16" data-aos="fade-up">
           <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
             <Users className="w-5 h-5 text-secondary" />
             <span className="text-base sm:text-lg font-semibold text-foreground">Già 847+ studenti attivi</span>
@@ -54,7 +54,6 @@ const SocialProof: React.FC = () => {
                 Prime AI ti insegna il metodo concreto per creare landing page che convertono, usando l'AI per velocizzare ogni passaggio.
               </p>
             </div>
-            
             <div className="space-y-3 sm:space-y-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3 hover:translate-x-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay={index * 100}>
@@ -63,7 +62,6 @@ const SocialProof: React.FC = () => {
                 </div>
               ))}
             </div>
-            
             {/* Urgency Element */}
             <div className="conversion-card bg-secondary/10 border-secondary/20 hover:scale-[1.02] transition-transform duration-300 w-full max-w-md" data-aos="zoom-in" data-aos-delay="400">
               <div className="flex items-center gap-2 mb-2">
@@ -73,16 +71,14 @@ const SocialProof: React.FC = () => {
               <div className="text-lg sm:text-xl font-bold text-secondary break-all">{countdown.displayTime}</div>
             </div>
           </div>
-          
           {/* Right - Image + Testimonials */}
           <div className="space-y-4 sm:space-y-6 w-full" data-aos="fade-left">
             <img 
               src="https://vg-bunny-cdn.b-cdn.net/public/or2mjx1q_.png"
               alt="Dashboard corso Prime AI"
-              className="w-full h-auto rounded-lg shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500 max-w-full"
+              className="w-full h-auto object-contain rounded-lg shadow-[var(--shadow-card)] hover:scale-[1.02] transition-transform duration-500 max-w-full"
               loading="lazy"
             />
-            
             {/* Testimonials */}
             <div className="space-y-3 sm:space-y-4">
               {testimonials.map((testimonial, index) => (
