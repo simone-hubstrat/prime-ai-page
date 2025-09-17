@@ -22,7 +22,7 @@ const HeroKiller: React.FC = () => {
       blendingValue="hard-light"
       interactive={false}
     >
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 relative z-10 w-full">
+      <section className="flex flex-col justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20 relative z-10 w-full">
         <div className="container mx-auto max-w-7xl w-full">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center w-full">
             {/* Left - Ultra-Converting Copy */}
