@@ -73,7 +73,7 @@ const HeroKiller: React.FC = () => {
                 
                 <div className="text-center p-3 bg-secondary/10 rounded-lg border border-secondary/20 w-full">
                   <p className="text-secondary font-semibold text-xs sm:text-sm leading-relaxed">
-                    Offerta scade tra:<br className="sm:hidden" />
+                    Offerta scade tra:<br className="sm:shown" />
                     <span className="block sm:inline sm:ml-1 font-bold">{countdown.displayTime}</span>
                   </p>
                 </div>
