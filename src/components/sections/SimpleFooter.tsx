@@ -2,7 +2,7 @@ import React from 'react';
 
 const SimpleFooter: React.FC = () => {
   return (
-    <footer className="py-6 sm:py-8 border-t border-border bg-muted/30 w-full overflow-hidden">
+    <footer className="relative w-full py-6 sm:py-8 border-t border-border bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center w-full max-w-7xl">
         <div className="space-y-3 sm:space-y-4">
           <div className="text-xs sm:text-sm text-muted-foreground">
