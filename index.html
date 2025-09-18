@@ -22,7 +22,7 @@
     <meta property="twitter:description" content="Impara a creare landing page efficaci con l'AI in 10 lezioni. Corso pratico per marketer e imprenditori." />
     <meta property="twitter:image" content="https://prime-ai-course.netlify.app/og-image.jpg" />
     
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Script (SOLO nella HEAD) -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -35,11 +35,6 @@
       fbq('init', '{your-pixel-id-goes-here}');
       fbq('track', 'PageView');
     </script>
-    <noscript>
-      <img height="1" width="1" style="display:none"
-           src="https://www.facebook.com/tr?id={your-pixel-id-goes-here}&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Meta Pixel Code -->
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -69,6 +64,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
   <body>
+    <!-- Meta Pixel NoScript (nel BODY) -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id={your-pixel-id-goes-here}&ev=PageView&noscript=1"/>
+    </noscript>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
