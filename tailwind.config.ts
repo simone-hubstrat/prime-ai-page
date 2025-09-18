@@ -17,7 +17,6 @@ export default {
       }
     },
     extend: {
-      // AGGIUNGERE QUESTE ANIMAZIONI
       animation: {
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
@@ -28,7 +27,6 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out'
       },
       keyframes: {
-        // AGGIUNGERE QUESTI KEYFRAMES
         moveHorizontal: {
           "0%": {
             transform: "translateX(-50%) translateY(-10%)",
