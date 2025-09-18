@@ -10,18 +10,18 @@ const HeroKiller: React.FC = () => {
   
   return (
     <BackgroundGradientAnimation
-      gradientBackgroundStart="rgb(10, 14, 26)"
-      gradientBackgroundEnd="rgb(20, 24, 36)"
-      firstColor="18, 113, 255"
-      secondColor="221, 74, 255"
-      thirdColor="100, 220, 255"
-      fourthColor="200, 50, 50"
-      fifthColor="180, 180, 50"
-      pointerColor="140, 100, 255"
-      size="80%"
-      blendingValue="hard-light"
-      interactive={false}
-    >
+  gradientBackgroundStart="rgb(10, 14, 26)"    // Colore di partenza sfondo
+  gradientBackgroundEnd="rgb(20, 24, 36)"      // Colore finale sfondo
+  firstColor="18, 113, 255"                    // Blu principale
+  secondColor="221, 74, 255"                   // Viola/magenta
+  thirdColor="100, 220, 255"                   // Azzurro
+  fourthColor="200, 50, 50"                    // Rosso
+  fifthColor="180, 180, 50"                    // Giallo
+  pointerColor="140, 100, 255"                 // Colore interattivo (disattivato)
+  size="80%"                                   // Dimensione effetti
+  blendingValue="hard-light"                   // Modalità blending
+  interactive={false}                          // Disattiva interattività mouse
+>
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start lg:items-center">
