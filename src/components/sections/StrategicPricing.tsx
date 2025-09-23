@@ -9,7 +9,7 @@ const StrategicPricing: React.FC = () => {
   const { countdown } = useCountdown();
   
   const features = [
-    "10 video lezioni step-by-step (2 ore totali)",
+    "10 video lezioni step-by-step (~30 minuti totali)",
     "Template pronti per ogni settore",
     "Prompt AI ottimizzati per landing page",
     "Guida copywriting che converte",
