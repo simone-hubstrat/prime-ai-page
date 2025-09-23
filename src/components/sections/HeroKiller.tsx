@@ -51,7 +51,7 @@ const HeroKiller: React.FC = () => {
                 </div>
                 <div className="conversion-card text-center">
                   <div className="text-2xl font-bold text-primary mb-1">10 lezioni</div>
-                  <div className="text-sm text-muted-foreground">Solo 2 ore totali</div>
+                  <div className="text-sm text-muted-foreground">Solo ~30 minuti totali</div>
                 </div>
                 <div className="conversion-card text-center">
                   <div className="text-2xl font-bold text-foreground mb-1">Zero codice</div>
