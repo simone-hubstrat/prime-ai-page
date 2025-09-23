@@ -48,10 +48,10 @@ const SocialProof: React.FC = () => {
           {/* Left - Benefits */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 break-words">
                 Perché questo corso funziona davvero?
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base sm:text-lg text-muted-foreground break-words">
                 Prime AI ti insegna il metodo concreto per creare landing page che convertono, usando l'AI per velocizzare ogni passaggio.
               </p>
             </div>
@@ -60,7 +60,7 @@ const SocialProof: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground font-medium">{benefit}</span>
+                  <span className="text-sm sm:text-base text-foreground font-medium break-words">{benefit}</span>
                 </div>
               ))}
             </div>

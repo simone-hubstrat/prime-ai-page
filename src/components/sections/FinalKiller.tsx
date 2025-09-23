@@ -47,7 +47,7 @@ const FinalKiller: React.FC = () => {
             <div className="text-3xl font-bold text-foreground">Inizia subito per €27,97</div>
             
             <Button variant="secondary" size="lg" className="w-full text-xl py-6">
-              Sì, voglio il corso Prime AI
+              <span className="text-center">Sì, voglio il corso Prime AI</span>
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             

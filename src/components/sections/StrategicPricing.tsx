@@ -57,7 +57,7 @@ const StrategicPricing: React.FC = () => {
           </div>
           
           {/* Main CTA */}
-          <Button variant="secondary" size="lg" className="w-full mb-4">
+          <Button variant="secondary" size="lg" className="w-full mb-4 whitespace-normal">
             Sì, voglio imparare - Acquista il corso
           </Button>
           

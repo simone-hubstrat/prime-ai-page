@@ -81,7 +81,7 @@ const HeroKiller: React.FC = () => {
                 </div>
                 
                 <Button variant="secondary" size="lg" className="w-full mb-4">
-                  Inizia ora - Accedi al corso
+                  <span className="text-center">Inizia ora - Accedi al corso</span>
                 </Button>
                 
                 <p className="text-sm text-center text-muted-foreground mb-4">

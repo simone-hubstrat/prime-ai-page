@@ -89,10 +89,10 @@ const TargetSection: React.FC = () => {
                   </div>
                   
                   <div className="space-y-2 sm:space-y-3 flex-1 min-w-0 w-full">
-                    <h3 className="font-bold text-lg sm:text-xl text-foreground">
+                    <h3 className="font-bold text-base sm:text-lg lg:text-xl text-foreground break-words">
                       {profile.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed break-words">
+                    <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed break-words">
                       {profile.description}
                     </p>
                     
