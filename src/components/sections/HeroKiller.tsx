@@ -63,7 +63,7 @@ const HeroKiller: React.FC = () => {
             {/* 3. Hero Image - TERZO SU MOBILE (tra Zero codice e pricing) */}
             <div className="order-3 lg:order-1 w-full max-w-lg mx-auto lg:max-w-none" data-aos="fade-left">
               <img 
-                src="https://vg-bunny-cdn.b-cdn.net/public/x0hdoi7c_.png"
+                src="https://vg-bunny-cdn.b-cdn.net/public/t8lqg3uk_.png"
                 alt="Persona che lavora al computer con AI"
                 className="w-full h-auto rounded-lg shadow-[var(--shadow-card)]"
                 loading="eager"
