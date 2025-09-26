@@ -81,7 +81,9 @@ const HeroKiller: React.FC = () => {
                 </div>
                 
                 <Button variant="secondary" size="lg" className="w-full mb-4">
-                  <span className="text-center">Inizia ora - Accedi al corso</span>
+                  <a href="https://hubstrat.gumroad.com/l/primeai-landing-course?wanted=true" target="_blank" rel="noopener noreferrer" className="text-center">
+                    Inizia ora - Accedi al corso
+                  </a>
                 </Button>
                 
                 <p className="text-sm text-center text-muted-foreground mb-4">
