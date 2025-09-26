@@ -2,6 +2,8 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import SimpleFooter from '@/components/sections/SimpleFooter';
 import ScrollToTop from '@/components/ui/scroll-to-top';
+import SimpleFooter from '@/components/sections/SimpleFooter';
+import ScrollToTop from '@/components/ui/scroll-to-top';
 
 const NotFound = () => {
   const location = useLocation();
@@ -24,6 +26,9 @@ const NotFound = () => {
           </a>
         </div>
       </div>
+      
+      <SimpleFooter />
+      <ScrollToTop />
       
       <SimpleFooter />
       <ScrollToTop />
