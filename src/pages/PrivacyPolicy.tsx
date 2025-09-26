@@ -1,10 +1,13 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SimpleFooter from '@/components/sections/SimpleFooter';
+import ScrollToTop from '@/components/ui/scroll-to-top';
 
 const PrivacyPolicy: React.FC = () => {
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
+    <div className="min-h-screen bg-background">
+      <div className="py-8 px-4">
       <div className="container mx-auto max-w-4xl">
         {/* Back to Home Button */}
         <div className="mb-8">
@@ -158,6 +161,10 @@ const PrivacyPolicy: React.FC = () => {
           </div>
         </div>
       </div>
+      </div>
+      
+      <SimpleFooter />
+      <ScrollToTop />
     </div>
   );
 };
