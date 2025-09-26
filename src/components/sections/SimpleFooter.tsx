@@ -21,9 +21,12 @@ const SimpleFooter: React.FC = () => {
             </a>
           </div>
           
-          <div className="text-xs text-muted-foreground break-words">
-            Metodi di pagamento: PayPal, Carta di Credito/Debito, Bonifico
-          </div>
+          {/*
+  <div className="text-xs text-muted-foreground break-words">
+    Metodi di pagamento: PayPal, Carta di Credito/Debito, Bonifico
+  </div>
+*/}
+
           
           <div className="text-xs text-muted-foreground break-words">
             © 2025 Prime AI Course - Tutti i diritti riservati
