@@ -137,7 +137,7 @@ const TermsConditions: React.FC = () => {
             <p>Salvo diversa indicazione e/o comunicazione, sul Sito Web sono accettate, esclusivamente, le seguenti modalità di pagamento:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Carta di credito (circuiti Visa, Mastercard, Maestro);</li>
-              <li>Carta di debito (circuiti Visa, Mastercard, MAestro);</li>
+              <li>Carta di debito (circuiti Visa, Mastercard, Maestro);</li>
             </ul>
 
             <h2 className="text-xl font-bold text-foreground mt-8 mb-4">Art. 7 - Diritti sul Materiale</h2>
