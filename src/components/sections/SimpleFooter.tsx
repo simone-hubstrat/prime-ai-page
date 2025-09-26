@@ -26,7 +26,7 @@ const SimpleFooter: React.FC = () => {
           </div>
           
           <div className="text-xs text-muted-foreground break-words">
-            © 2024 Prime AI Course - Tutti i diritti riservati | Privacy Policy
+            © 2025 Prime AI Course - Tutti i diritti riservati
           </div>
         </div>
       </div>
