@@ -6,8 +6,6 @@ import TargetSection from '../components/sections/TargetSection';
 import FinalKiller from '../components/sections/FinalKiller';
 import SimpleFooter from '../components/sections/SimpleFooter';
 import { CountdownProvider } from '../hooks/countdown-provider';
-import ScrollToTop from '../components/ui/scroll-to-top';
-import ScrollToTop from '../components/ui/scroll-to-top';
 
 const Index: React.FC = () => {
   // Smooth scrolling for anchor links
@@ -63,12 +61,6 @@ const Index: React.FC = () => {
         
         {/* Simple Footer */}
         <SimpleFooter />
-        
-        {/* Scroll to Top */}
-        <ScrollToTop />
-        
-        {/* Scroll to Top */}
-        <ScrollToTop />
       </main>
     </CountdownProvider>
   );

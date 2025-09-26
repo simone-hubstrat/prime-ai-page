@@ -1,16 +1,10 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import SimpleFooter from '@/components/sections/SimpleFooter';
-import ScrollToTop from '@/components/ui/scroll-to-top';
-import SimpleFooter from '@/components/sections/SimpleFooter';
-import ScrollToTop from '@/components/ui/scroll-to-top';
 
 const TermsConditions: React.FC = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="py-8 px-4">
-      <div className="py-8 px-4">
+    <div className="min-h-screen bg-background py-8 px-4">
       <div className="container mx-auto max-w-4xl">
         {/* Back to Home Button */}
         <div className="mb-8">
@@ -143,7 +137,7 @@ const TermsConditions: React.FC = () => {
             <p>Salvo diversa indicazione e/o comunicazione, sul Sito Web sono accettate, esclusivamente, le seguenti modalità di pagamento:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Carta di credito (circuiti Visa, Mastercard, Maestro);</li>
-              <li>Carta di debito (circuiti Visa, Mastercard, Maestro);</li>
+              <li>Carta di debito (circuiti Visa, Mastercard, MAestro);</li>
             </ul>
 
             <h2 className="text-xl font-bold text-foreground mt-8 mb-4">Art. 7 - Diritti sul Materiale</h2>
@@ -250,14 +244,6 @@ const TermsConditions: React.FC = () => {
           </div>
         </div>
       </div>
-      </div>
-      
-      <SimpleFooter />
-      <ScrollToTop />
-      </div>
-      
-      <SimpleFooter />
-      <ScrollToTop />
     </div>
   );
 };
