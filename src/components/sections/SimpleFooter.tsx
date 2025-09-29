@@ -19,6 +19,13 @@ const SimpleFooter: React.FC = () => {
             >
               Termini e Condizioni
             </a>
+            <span>•</span>
+            <a 
+              href="/cookie-policy"
+              className="hover:text-primary transition-colors"
+            >
+              Cookie Policy
+            </a>
           </div>
           
           {/*
