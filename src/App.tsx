@@ -3,13 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Index from './pages/Index';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
-import CookieConsentScript from './components/CookieConsentScript';
 import './App.css';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <CookieConsentScript />
       <div className="App">
         <Routes>
           <Route path="/" element={<Index />} />
