@@ -38,12 +38,12 @@ const CookiePolicy: React.FC = () => {
                 "Utente", "Lei", "Suo" e termini analoghi, sia al singolare che al plurale si riferiscono a Lei, in qualità di utente e/o utilizzatore del nostro sito web.
               </p>
               <p>
-                "Sito Web", "Sito", "Piattaforma" o termini analoghi, si riferiscono al seguente indirizzo web: https://primeai.it/.
+                "Sito Web", "Sito", "Piattaforma" o termini analoghi, si riferiscono al seguente indirizzo web: [https://primeai.it/](https://primeai.it/).
               </p>
 
               <h2 className="text-xl font-bold text-foreground mt-8 mb-4">Premessa</h2>
               <p>
-                Il presente documento costituisce l'Informativa estesa di cui al paragrafo 4.2 del Provvedimento n. 229 dell'8 maggio 2014. La finalità è di mettere a conoscenza l'Utente sulla tipologia di Cookie presenti sul nostro Sito e descrivere in generale, a fronte dell'esistenza dei cookie, le modalità di gestione del trattamento di dati personali acquisiti dal Sito web https://primeai.it/ (di seguito "Sito"). Questa Policy Cookie è stata realizzata per fornire all'Utente le informazioni necessarie, riguardanti il modo in cui i cookie vengono utilizzati nel presente Sito Internet, e le alternative a disposizione per gestirli secondo le sue preferenze.
+                Il presente documento costituisce l'Informativa estesa di cui al paragrafo 4.2 del Provvedimento n. 229 dell'8 maggio 2014. La finalità è di mettere a conoscenza l'Utente sulla tipologia di Cookie presenti sul nostro Sito e descrivere in generale, a fronte dell'esistenza dei cookie, le modalità di gestione del trattamento di dati personali acquisiti dal Sito web [https://primeai.it/](https://primeai.it/) (di seguito "Sito"). Questa Policy Cookie è stata realizzata per fornire all'Utente le informazioni necessarie, riguardanti il modo in cui i cookie vengono utilizzati nel presente Sito Internet, e le alternative a disposizione per gestirli secondo le sue preferenze.
               </p>
 
               <h2 className="text-xl font-bold text-foreground mt-8 mb-4">Art. 1 - Titolare del trattamento dei dati personali</h2>
@@ -51,7 +51,7 @@ const CookiePolicy: React.FC = () => {
                 Titolare del trattamento dei dati personali è la Hubstrat S.r.l..
               </p>
               <p>
-                Può contattare il nostro responsabile della protezione dei dati scrivendo una e-mail a hello@hubstrat.it e indicando nell'oggetto "trattamento dati personali".
+                Può contattare il nostro responsabile della protezione dei dati scrivendo una e-mail a [hello@hubstrat.it](mailto:hello@hubstrat.it) e indicando nell'oggetto "trattamento dati personali".
               </p>
 
               <h2 className="text-xl font-bold text-foreground mt-8 mb-4">Art. 2 - Definizione di Cookie</h2>
@@ -101,6 +101,9 @@ const CookiePolicy: React.FC = () => {
                 <li>cookie commerciali;</li>
                 <li>cookie terzi provenienti dalle reti social.</li>
               </ul>
+              
+              {/* CookieYes Audit Table Element */}
+              <div className="cky-audit-table-element"></div>
             </div>
           </div>
         </div>
