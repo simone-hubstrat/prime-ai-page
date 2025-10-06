@@ -58,7 +58,7 @@ const StrategicPricing: React.FC = () => {
           
           {/* Main CTA */}
           <Button variant="secondary" size="lg" className="w-full mb-4 whitespace-normal">
-            <a href="https://hubstrat.gumroad.com/l/primeai-landing-course?wanted=true" target="_blank" rel="noopener noreferrer">
+            <a href="https://primeai.lemonsqueezy.com/checkout" target="_blank" rel="noopener noreferrer">
               Sì, voglio imparare - Acquista il corso
             </a>
           </Button>

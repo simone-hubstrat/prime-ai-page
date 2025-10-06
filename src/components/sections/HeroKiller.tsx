@@ -81,7 +81,7 @@ const HeroKiller: React.FC = () => {
                 </div>
                 
                 <Button variant="secondary" size="lg" className="w-full mb-4">
-                  <a href="https://primeai.lemonsqueezy.com/checkout?wanted=true" target="_blank" rel="noopener noreferrer" className="text-center">
+                  <a href="https://primeai.lemonsqueezy.com/checkout" target="_blank" rel="noopener noreferrer" className="text-center">
                     Inizia ora - Accedi al corso
                   </a>
                 </Button>
