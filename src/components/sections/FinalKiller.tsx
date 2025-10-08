@@ -47,7 +47,7 @@ const FinalKiller: React.FC = () => {
             <div className="text-3xl font-bold text-foreground">Inizia subito per €27,97</div>
             
             <Button variant="secondary" size="lg" className="w-full text-xl py-6">
-              <a href="https://primeai.lemonsqueezy.com/checkout" target="_blank" rel="noopener noreferrer" className="text-center">
+              <a href="https://primeai.lemonsqueezy.com/buy/f206c274-00f0-4b27-b63e-5b22f0939a86" target="_blank" rel="noopener noreferrer" className="text-center">
                 Sì, voglio il corso Prime AI
               </a>
               <ArrowRight className="w-5 h-5 ml-2" />
